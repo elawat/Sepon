@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#"  MasterPageFile="~/master/Parent.master" AutoEventWireup="true" CodeFile="References.master.cs" Inherits="master_References" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <ul class="list-unstyled sidebar-nav">
+        <li><a href="../pages/References.aspx"><h4>References</h4></a></li>
+        <li><a href="#"><h4>Links</h4></a></li>
+     </ul>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <asp:ContentPlaceHolder id="MainContent" runat="server">
+  </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    <asp:ContentPlaceHolder id="RightSidebar" runat="server">
+  </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+

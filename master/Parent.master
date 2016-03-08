@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Parent.master.cs" Inherits="master_Parent" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+  <title></title>
+  <asp:ContentPlaceHolder id="head" runat="server">
+  </asp:ContentPlaceHolder>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href="../css/StyleSheet.css" rel="stylesheet" />
+</head>
+
+<body>
+<form id="form2" runat="server">
+
+<!-- Wrap all page content here -->
+<div class="wrapper" id="wrap">
+
+<header class="masthead">
+    <div class="container">
+    <div class="row">
+      <div id="toplink" class="col-sm-3">
+        <h1><a href="../pages/Default.aspx" title="Home Page">olha.com</a></h1>
+      </div>
+      <div id="toptext" class="col-sm-9">
+        <h5>AN INVESTIGATION OF THE METALLURGICAL MATERIAL FROM PEUN BAOLO AND THONG NA NGUAK, LAOS</></h5>
+      </div>
+    </div>
+    </div>
+</header>
+
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="../pages/About.aspx">ABOUT</a></li>
+        <li><a href="../pages/PBandTNN.aspx">PEUN BAOLO & THONG NA NGUAK</a></li>
+        <li><a href="../pages/Analyses.aspx">ANALYSES</a></li>
+        <li><a href="#">INTERPRETATION</a></li>
+        <li><a href="../pages/References.aspx">REFERENCES</a></li>
+        <li><a href="#">DOWNLOAD</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="row" id="centralrow">
+  <div id="leftcol" class="col-sm-2">
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+  </asp:ContentPlaceHolder>
+  </div>
+  <div id="centralcol" class="col-sm-7">
+      <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+  </asp:ContentPlaceHolder>
+  </div>
+  <div id="rightcol" class="col-sm-3">
+      <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+  </asp:ContentPlaceHolder>
+  </div>
+</div>
+
+</div><!--/wrap-->
+
+
+
+<div id="row">
+  <div id="footer" class="panel-footer panel-custom">
+    <p class="p-footer"><a href="../pages/Default.aspx">Investigation of the Metallurgical Material from Peun Baolo and Thong Na Nguak, Laos</a></p>
+    <p class="p-footer"><small>Ela Watroba © 2016</small></p>
+  </div>
+</div>
+
+
+</form>
+</body>
+</html>

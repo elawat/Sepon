@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85541E07-45D0-4292-A29E-9193187686B4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sepon</RootNamespace>
+    <AssemblyName>Sepon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\StyleSheet.css" />
+    <Content Include="images\chronology.jpg" />
+    <Content Include="images\homepage.jpg" />
+    <Content Include="images\kiwi.png" />
+    <Content Include="images\map.png" />
+    <Content Include="js\JavaScript.js" />
+    <Content Include="pages\About.aspx" />
+    <Content Include="pages\Acknowledgements.aspx" />
+    <Content Include="pages\Analyses.aspx" />
+    <Content Include="pages\Analytical methods.aspx" />
+    <Content Include="pages\Copper Minerals.aspx" />
+    <Content Include="pages\Crucible slag.aspx" />
+    <Content Include="pages\Crucibles.aspx" />
+    <Content Include="pages\Default.aspx" />
+    <Content Include="pages\GeologicalSetting.aspx" />
+    <Content Include="pages\Ingot.aspx" />
+    <Content Include="pages\PBandTNN.aspx" />
+    <Content Include="pages\Pottery.aspx" />
+    <Content Include="pages\References.aspx" />
+    <Content Include="pages\Slag.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="master\About.master.cs">
+      <DependentUpon>About.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\MasterAnalyses.master.cs">
+      <DependentUpon>MasterAnalyses.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\MasterHome.master.cs">
+      <DependentUpon>MasterHome.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\MasterSites.master.cs">
+      <DependentUpon>MasterSites.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\Parent.master.cs">
+      <DependentUpon>Parent.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\References.master.cs">
+      <DependentUpon>References.master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Acknowledgements.aspx.cs">
+      <DependentUpon>Acknowledgements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Analyses.aspx.cs">
+      <DependentUpon>Analyses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Analytical methods.aspx.cs">
+      <DependentUpon>Analytical methods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Copper Minerals.aspx.cs">
+      <DependentUpon>Copper Minerals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Crucible slag.aspx.cs">
+      <DependentUpon>Crucible slag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Crucibles.aspx.cs">
+      <DependentUpon>Crucibles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\GeologicalSetting.aspx.cs">
+      <DependentUpon>GeologicalSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Ingot.aspx.cs">
+      <DependentUpon>Ingot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PBandTNN.aspx.cs">
+      <DependentUpon>PBandTNN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Pottery.aspx.cs">
+      <DependentUpon>Pottery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\References.aspx.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Slag.aspx.cs">
+      <DependentUpon>Slag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="download\Appendix 1 Analytical Equipment &amp; Its Working Conditions.pdf" />
+    <Content Include="master\About.master" />
+    <Content Include="master\MasterAnalyses.master" />
+    <Content Include="master\MasterHome.master" />
+    <Content Include="master\MasterSites.master" />
+    <Content Include="master\Parent.master" />
+    <Content Include="master\References.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49660</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50214/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

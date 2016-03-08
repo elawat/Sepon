@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/master/Parent.master" AutoEventWireup="true" CodeFile="MasterAnalyses.master.cs" Inherits="master_MasterAnalyses" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+     <ul class="list-unstyled sidebar-nav">
+        <li><a href="../pages/Analyses.aspx"><h4>Sampling</h4></a></li>
+        <li><a href="../pages/Analytical methods.aspx"><h4>Analytical methods</h4></a></li>
+        <li><a href="../pages/Copper Minerals.aspx"><h4>Copper minerals</h4></a></li>
+        <li><a href="../pages/Crucibles.aspx"><h4>Crucibles</h4></a></li>
+        <li><a href="../pages/Crucible slag.aspx"><h4>Crucible slag</h4></a></li>
+        <li><a href="../pages/Slag.aspx"><h4>Slag</h4></a></li>
+        <li><a href="../pages/Ingot.aspx"><h4>Ingot</h4></a></li>
+         <li><a href="../pages/Pottery.aspx"><h4>Pottery</h4></a></li>
+     </ul>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <asp:ContentPlaceHolder id="MainContent" runat="server">
+  </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    
+    <asp:ContentPlaceHolder id="RightSidebar" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+
+
+
+

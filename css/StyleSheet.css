@@ -1,0 +1,261 @@
+﻿/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/*
+NOTES
+HEADER
+NAVBAR
+LINKS
+MAIN       centralrow, leftcol, centralcol, sidebar-nav, homerow
+IMAGES
+FOOTER
+*/
+
+/*------------------------------------*\
+    $NOTES
+\*------------------------------------*/
+/*
+Colours
+    orange	#B63C25: toplink, navbar hoover
+    light grey	#EAE9CA: sidenav, gridview alternating rows, footer
+    dark	#3B0624: navbar links
+    white	#FFFFFF
+    grey #3F3F3F: sidebar-nav links
+
+<p> in centralcol
+    with indentation
+    class ni-indent without indentation
+*/
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+.masthead {
+    border-bottom: groove;
+    border-bottom-color: #B63C25;
+    border-top-color: #3B0624;
+}
+
+.masthead a {
+    color: #B63C25;
+}
+
+#toplink {
+    font-family: Lobster;
+    padding-bottom: 0px;
+}
+
+#toptext {
+    padding-bottom: 0px;
+    padding-top: 30px;
+    text-align: right;   
+}
+
+#toptext h5 {
+     color: #3B0624;
+}
+
+/*------------------------------------*\
+    $NAVBAR
+\*------------------------------------*/
+
+.navbar-default {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    margin: 0px;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #3B0624;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #FFFFFF;
+    background-color: #B63C25;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+    background-color: #B63C25;
+}
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+
+a {
+  color: #3F3F3F;
+} 
+
+a:link {
+    
+}
+
+a:visited {
+}
+
+a:hover {
+    color: #B63C25;
+    text-decoration: none;
+}
+
+a:active {
+    
+}
+
+.download {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: #3F3F3F;
+    font-style: italic;
+}
+
+.download:focus  {
+    color: #B63C25;
+    text-decoration: none;
+}
+
+.download:hover {
+    color: #B63C25;
+    text-decoration: none;
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+#centralrow {
+    margin: 0px;
+    min-height: 600px;
+}
+
+#leftcol {
+   margin:0px;
+   padding:0px;
+}
+
+#centralcol {
+    margin-top: 20px;
+   padding-top: 0px;
+}
+
+#centralcol > p {
+    text-indent: 50px;
+}
+
+#centralcol > p.no-indent {
+    text-indent: 0px;
+}
+
+.sidebar-nav {
+     margin:20px 0px 10px 0;  
+     padding: 5px 0px 5px 5px;
+     background-color: #EAE9CA; 
+}
+
+.sidebar-nav > li > a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #3F3F3F;
+}
+
+.sidebar-nav > li > a:hover{
+   color: #B63C25;
+}
+
+.sidebar-nav > li > a:focus {
+    color: #B63C25;
+}
+
+#homerow, #homerow2, #homerow3 {
+   margin: 0px;
+   position: absolute;
+   width: 100%;
+   padding: 0px;
+}
+
+#rightcol {
+   margin-top: 20px;
+   padding:0px;
+}
+
+
+#home {
+    max-width:100%;
+    max-height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+
+#kiwi {
+    float: right;
+}
+
+#map {
+    width: 450px;
+    height: 431px;
+}
+
+#chronology {
+    width: 650px;
+    height: 339px;
+}
+
+img.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid {
+    width: 550px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+.panel-footer.panel-custom {
+    background-color: #EAE9CA;
+    border-color: #EAE9CA;
+    margin-top: 15px;
+    height: auto;
+}
+
+.p-footer {
+    color: #3F3F3F;
+    text-align: center;
+    font-style: italic;
+    margin: 0px;
+}
+
+.p-footer > a:hover {
+    color: #B63C25;
+    text-decoration: none;
+}
+/*------------------------------------*\
+    $LOOKUP-BOX
+\*------------------------------------*/
+.lookup-box {
+    background-color: #FFFFFF;
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin: 0px;
+    display: block;
+}
+
+#txbFindAuthor {
+    
+}
