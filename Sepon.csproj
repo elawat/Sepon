@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="pages\References.aspx.cs">
       <DependentUpon>References.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Slag.aspx.cs">
       <DependentUpon>Slag.aspx</DependentUpon>

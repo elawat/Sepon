@@ -1,0 +1,6 @@
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\bin\Sepon.dll.config
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\bin\Sepon.dll
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\bin\Sepon.pdb
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\obj\Debug\Sepon.csprojResolveAssemblyReference.cache
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\obj\Debug\Sepon.dll
+C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\obj\Debug\Sepon.pdb
