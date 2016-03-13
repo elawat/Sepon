@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2431DBE2-FE0E-4262-A46E-0D96A3ADCC99}</ProjectGuid>
+    <ProjectGuid>{1FA40E6C-9D04-4BD8-BDD4-B72F20103574}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sepon.Data</RootNamespace>
@@ -68,12 +68,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <EntityDeploy Include="SeponEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SeponEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <None Include="SeponEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SeponEntities.edmx</DependentUpon>
