@@ -7,9 +7,9 @@
       <Schema Namespace="SeponModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="References">
           <Key>
-            <PropertyRef Name="Reference" />
+            <PropertyRef Name="Reference_ID" />
           </Key>
-          <Property Name="Reference" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Reference_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="SeponModelStoreContainer">
@@ -22,9 +22,9 @@
       <Schema Namespace="SeponModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Reference">
           <Key>
-            <PropertyRef Name="Reference1" />
+            <PropertyRef Name="Reference_ID" />
           </Key>
-          <Property Name="Reference1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Reference_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="SeponEntities" annotation:LazyLoadingEnabled="true">
@@ -39,7 +39,7 @@
           <EntitySetMapping Name="References">
             <EntityTypeMapping TypeName="SeponModel.Reference">
               <MappingFragment StoreEntitySet="References">
-                <ScalarProperty Name="Reference1" ColumnName="Reference" />
+                <ScalarProperty Name="Reference_ID" ColumnName="Reference_ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
               </MappingFragment>
             </EntityTypeMapping>

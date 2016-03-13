@@ -1,4 +1,4 @@
-﻿<%@ Page Title="crucible" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" CodeFile="Crucibles.aspx.cs" Inherits="pages_Crucibles" %>
+﻿<%@ Page Title="crucible" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" Inherits="pages_Crucibles" Codebehind="Crucibles.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 </asp:Content>

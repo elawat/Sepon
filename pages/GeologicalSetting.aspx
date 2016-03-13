@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/MasterSites.master" AutoEventWireup="true" CodeFile="GeologicalSetting.aspx.cs" Inherits="pages_GeologicalSetting" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/MasterSites.master" AutoEventWireup="true" Inherits="pages_GeologicalSetting" Codebehind="GeologicalSetting.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <p>The Sepon region is situated along the Truong Son Fold Belt, a NW-trending track of folded Palaeozoic sedimentary rocks with major granite intrusion which occupies north-centre of Laos and extends eastward into central Vietnam (Workman, 1997, p. 496). The style of mineralisation in the Sepon district and its mining potential was recognised in 1990 when copper and gold lodes covering a variety of primary and secondary types were first documented (Manini & Albert, online). <p>

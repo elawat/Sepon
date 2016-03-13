@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sepon.Data
+namespace Sepon
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Reference
     {
-        public string Reference1 { get; set; }
+        public string Reference_ID { get; set; }
         public string Title { get; set; }
     }
 }

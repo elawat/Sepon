@@ -1,4 +1,4 @@
-﻿<%@ Page Title="crucible slag" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" CodeFile="Crucible slag.aspx.cs" Inherits="pages_Crucible_slag" %>
+﻿<%@ Page Title="crucible slag" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" Inherits="pages_Crucible_slag" Codebehind="Crucible slag.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 </asp:Content>

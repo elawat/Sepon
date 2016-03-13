@@ -38,7 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -82,15 +89,19 @@
   <ItemGroup>
     <Compile Include="master\About.master.cs">
       <DependentUpon>About.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master\MasterAnalyses.master.cs">
       <DependentUpon>MasterAnalyses.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master\MasterHome.master.cs">
       <DependentUpon>MasterHome.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master\MasterSites.master.cs">
       <DependentUpon>MasterSites.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="master\Parent.master.cs">
       <DependentUpon>Parent.master</DependentUpon>
@@ -98,52 +109,126 @@
     </Compile>
     <Compile Include="master\References.master.cs">
       <DependentUpon>References.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Acknowledgements.aspx.cs">
       <DependentUpon>Acknowledgements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Acknowledgements.aspx.designer.cs">
+      <DependentUpon>Acknowledgements.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Analyses.aspx.cs">
+      <DependentUpon>Analyses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Analyses.aspx.designer.cs">
       <DependentUpon>Analyses.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Analytical methods.aspx.cs">
       <DependentUpon>Analytical methods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Analytical methods.aspx.designer.cs">
+      <DependentUpon>Analytical methods.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Copper Minerals.aspx.cs">
+      <DependentUpon>Copper Minerals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Copper Minerals.aspx.designer.cs">
       <DependentUpon>Copper Minerals.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Crucible slag.aspx.cs">
       <DependentUpon>Crucible slag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Crucible slag.aspx.designer.cs">
+      <DependentUpon>Crucible slag.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Crucibles.aspx.cs">
+      <DependentUpon>Crucibles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Crucibles.aspx.designer.cs">
       <DependentUpon>Crucibles.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\GeologicalSetting.aspx.cs">
+      <DependentUpon>GeologicalSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\GeologicalSetting.aspx.designer.cs">
       <DependentUpon>GeologicalSetting.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Ingot.aspx.cs">
       <DependentUpon>Ingot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Ingot.aspx.designer.cs">
+      <DependentUpon>Ingot.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\PBandTNN.aspx.cs">
       <DependentUpon>PBandTNN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\PBandTNN.aspx.designer.cs">
+      <DependentUpon>PBandTNN.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Pottery.aspx.cs">
+      <DependentUpon>Pottery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Pottery.aspx.designer.cs">
       <DependentUpon>Pottery.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\References.aspx.cs">
       <DependentUpon>References.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="pages\References.aspx.designer.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SeponEntities.cs" />
     <Compile Include="pages\Slag.aspx.cs">
+      <DependentUpon>Slag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Slag.aspx.designer.cs">
       <DependentUpon>Slag.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reference.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeponEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeponEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeponEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeponEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeponEntities.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="download\Appendix 1 Analytical Equipment &amp; Its Working Conditions.pdf" />
@@ -153,12 +238,33 @@
     <Content Include="master\MasterSites.master" />
     <Content Include="master\Parent.master" />
     <Content Include="master\References.master" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="SeponEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SeponEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="SeponEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SeponEntities.edmx</DependentUpon>
+      <LastGenOutput>SeponEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SeponEntities.edmx.diagram">
+      <DependentUpon>SeponEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="SeponEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SeponEntities.edmx</DependentUpon>
+      <LastGenOutput>SeponEntities.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

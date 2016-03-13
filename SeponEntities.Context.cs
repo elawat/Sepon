@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sepon.Data
+namespace Sepon
 {
     using System;
     using System.Data.Entity;

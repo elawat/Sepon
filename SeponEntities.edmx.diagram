@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7a3ceac1aa0f43c3a2aebef42e5d5f3e" Name="Diagram1">
+      <Diagram DiagramId="952a7d3d5eb44f72b456502e68b26d19" Name="Diagram1">
         <EntityTypeShape EntityType="SeponModel.Reference" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

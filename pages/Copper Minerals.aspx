@@ -1,4 +1,4 @@
-﻿<%@ Page Title="mineral" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" CodeFile="Copper Minerals.aspx.cs" Inherits="pages_CopperMinerals" %>
+﻿<%@ Page Title="mineral" Language="C#" MasterPageFile="~/master/MasterAnalyses.master" AutoEventWireup="true" Inherits="pages_CopperMinerals" Codebehind="Copper Minerals.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 </asp:Content>
