@@ -10,4 +10,31 @@
 
 
 public partial class master_Analyses {
+    
+    /// <summary>
+    /// GridViewSamples control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.GridView GridViewSamples;
+    
+    /// <summary>
+    /// SqlDataSourceSamples control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSamples;
+    
+    /// <summary>
+    /// btnExportExcel control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnExportExcel;
 }
