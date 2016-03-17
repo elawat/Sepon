@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SeponModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SeponModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="References">
           <Key>
             <PropertyRef Name="Reference_ID" />
@@ -12,11 +12,22 @@
           <Property Name="Reference_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="Samples">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Object_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sample_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sample_No" Type="int" />
+          <Property Name="Object_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Analysed" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityContainer Name="SeponModelStoreContainer">
           <EntitySet Name="References" EntityType="Self.References" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Samples" EntityType="Self.Samples" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SeponModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -29,7 +40,19 @@
         </EntityType>
         <EntityContainer Name="SeponEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="References" EntityType="Self.Reference" />
+          <EntitySet Name="Samples" EntityType="SeponModel.Sample" />
         </EntityContainer>
+        <EntityType Name="Sample">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Object_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_No" Type="Int32" />
+          <Property Name="Object_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Analysed" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -41,6 +64,18 @@
               <MappingFragment StoreEntitySet="References">
                 <ScalarProperty Name="Reference_ID" ColumnName="Reference_ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Samples">
+            <EntityTypeMapping TypeName="SeponModel.Sample">
+              <MappingFragment StoreEntitySet="Samples">
+                <ScalarProperty Name="Analysed" ColumnName="Analysed" />
+                <ScalarProperty Name="Object_Type" ColumnName="Object_Type" />
+                <ScalarProperty Name="Sample_No" ColumnName="Sample_No" />
+                <ScalarProperty Name="Sample_Type" ColumnName="Sample_Type" />
+                <ScalarProperty Name="Object_ID" ColumnName="Object_ID" />
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

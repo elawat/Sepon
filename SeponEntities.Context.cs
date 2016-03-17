@@ -26,5 +26,6 @@ namespace Sepon
         }
     
         public DbSet<Reference> References { get; set; }
+        public DbSet<Sample> Samples { get; set; }
     }
 }

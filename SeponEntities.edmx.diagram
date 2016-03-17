@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="952a7d3d5eb44f72b456502e68b26d19" Name="Diagram1">
         <EntityTypeShape EntityType="SeponModel.Reference" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeponModel.Sample" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
