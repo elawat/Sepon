@@ -20,6 +20,7 @@ public partial class master_MasterAnalyses : System.Web.UI.MasterPage
                                   select new { sample.Object_ID, sample.Sample_Type, sample.Object_Type }; //anonymous type for multiple column selection
             if (selectedSamples.Any())
             {
+                
                 GridViewSamplesRight.DataSource = selectedSamples.ToList();
                 GridViewSamplesRight.DataBind();
             }

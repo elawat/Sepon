@@ -27,7 +27,7 @@ public partial class References : System.Web.UI.Page
                                      //join author in dbSepon.References_Authors on reference.Reference_ID equals author.Reference_ID
                                      where reference.Title.Contains(inputAuthor)
                                      //where author.Author.Contains(inputAuthor)
-                                     select reference.Title;
+                                     select new { reference.Title };
                 GridViewSelectedAuthours.DataSource = selectedAuthor.ToList();
                 GridViewSelectedAuthours.DataBind();
             }

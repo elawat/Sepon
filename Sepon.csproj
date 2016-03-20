@@ -84,6 +84,7 @@
     <Content Include="pages\Pottery.aspx" />
     <Content Include="pages\References.aspx" />
     <Content Include="pages\Slag.aspx" />
+    <Content Include="pages\test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="pages\Slag.aspx.designer.cs">
       <DependentUpon>Slag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reference.cs">
