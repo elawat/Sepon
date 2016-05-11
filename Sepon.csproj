@@ -70,6 +70,7 @@
     <Content Include="images\kiwi.png" />
     <Content Include="images\map.png" />
     <Content Include="js\JavaScript.js" />
+    <Content Include="js\jquery_functions.js" />
     <Content Include="pages\About.aspx" />
     <Content Include="pages\Acknowledgements.aspx" />
     <Content Include="pages\Analyses.aspx" />
