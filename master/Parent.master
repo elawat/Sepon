@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Parent.master.cs" Inherits="master_Parent" %>
+﻿<%@ Master Language="C#" AutoEventWireup="True" Inherits="master_Parent" Codebehind="Parent.master.cs" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +16,28 @@
   <link href="../css/StyleSheet.css" rel="stylesheet" />
   <script>
     $(document).ready(function(){
-        $("cite").click(function(){
-            $(this).hide();
+        $("cite").click(function () {
+
+            var fn = "ela";
+       
+            //$('#lblSelectedReferenceTitle').text(RefID);
+
+            $.ajax({
+                method: "post",
+                url: "../pages/About.aspx/GetReferenceByID",
+                contentType: "application/json",
+                data: '{fn: "' + fn + '" }',
+                dataType: "json",
+                success: function (data) {
+                    alert(data.d);
+
+                },
+                failure: function (error) {
+                    alert(error);
+                }
+            });
         });
+
     });
   </script>
 </head>
@@ -33,7 +52,7 @@
     <div class="container">
     <div class="row">
       <div id="toplink" class="col-sm-3">
-        <h1><a href="../pages/Default.aspx" title="Home Page">olha.com</a></h1>
+        <h1><a href="../pages/Default.aspx" title="Home Page">Samples of Sepon</a></h1>
       </div>
       <div id="toptext" class="col-sm-9">
         <h5>AN INVESTIGATION OF THE METALLURGICAL MATERIAL FROM PEUN BAOLO AND THONG NA NGUAK, LAOS</></h5>
@@ -74,10 +93,13 @@
   </div>
   <div id="centralcol" class="col-sm-7">
       <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+          
   </asp:ContentPlaceHolder>
   </div>
   <div id="rightcol" class="col-sm-3">
+      
       <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+          
   </asp:ContentPlaceHolder>
   </div>
 </div>

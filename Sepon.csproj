@@ -89,6 +89,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="master\About.master.cs">
       <DependentUpon>About.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,6 +114,9 @@
     <Compile Include="master\Parent.master.cs">
       <DependentUpon>Parent.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\Parent.master.designer.cs">
+      <DependentUpon>Parent.master</DependentUpon>
     </Compile>
     <Compile Include="master\References.master.cs">
       <DependentUpon>References.master</DependentUpon>
