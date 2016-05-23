@@ -14,12 +14,7 @@ public partial class pages_GeologicalSetting : BasePage
 
     }
 
-    [System.Web.Services.WebMethod]
-    public static string test(string ReferenceID)
-    {
-        return ReferenceID + "ggg";
-    }
-
+    
    
 
     
