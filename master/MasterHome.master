@@ -46,12 +46,14 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+         <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="#">SITE MAP</a></li>
         <li><a href="../pages/About.aspx">ABOUT</a></li>
         <li><a href="../pages/PBandTNN.aspx">PEUN BAOLO & THONG NA NGUAK</a></li>
         <li><a href="../pages/Analyses.aspx">ANALYSES</a></li>
         <li><a href="#">INTERPRETATION</a></li>
         <li><a href="../pages/References.aspx">REFERENCES</a></li>
+        <li><a href="#">DATABASE</a></li>
         <li><a href="#">DOWNLOAD</a></li>
         <li><a href="#">CONTACT</a></li>
       </ul>

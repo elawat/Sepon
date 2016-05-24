@@ -11,35 +11,10 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="..js/jquery_functions.js"></script>
+  <script src="../js/jquery_functions.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href="../css/StyleSheet.css" rel="stylesheet" />
-  <script>
-    $(document).ready(function(){
-        $("cite").click(function () {
 
-            var fn = "ela";
-       
-            //$('#lblSelectedReferenceTitle').text(RefID);
-
-            $.ajax({
-                method: "post",
-                url: "../pages/About.aspx/GetReferenceByID",
-                contentType: "application/json",
-                data: '{fn: "' + fn + '" }',
-                dataType: "json",
-                success: function (data) {
-                    alert(data.d);
-
-                },
-                failure: function (error) {
-                    alert(error);
-                }
-            });
-        });
-
-    });
-  </script>
 </head>
 
 <body>
@@ -73,11 +48,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="#">SITE MAP</a></li>
         <li><a href="../pages/About.aspx">ABOUT</a></li>
         <li><a href="../pages/PBandTNN.aspx">PEUN BAOLO & THONG NA NGUAK</a></li>
         <li><a href="../pages/Analyses.aspx">ANALYSES</a></li>
         <li><a href="#">INTERPRETATION</a></li>
         <li><a href="../pages/References.aspx">REFERENCES</a></li>
+        <li><a href="#">DATABASE</a></li>
         <li><a href="#">DOWNLOAD</a></li>
         <li><a href="#">CONTACT</a></li>
       </ul>

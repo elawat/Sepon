@@ -192,6 +192,11 @@ a:active {
     padding: 0px;
 }
 
+p > cite {
+    cursor: pointer;
+    font-weight: 400;
+    font-style: italic;
+}
 /*------------------------------------*\
     $IMAGES
 \*------------------------------------*/
