@@ -37,12 +37,12 @@
 	<p>Three main hypogene mineralisation styles were recognised comprising distal sedimentary rock hosted gold, proximal skarn (Cu, Au) and central porphyry (Cu-Mo). There are epigenetic in their origin involving magmatic and minor metamorphic fluids and occur along the faults and/or veins cutting all of the Palaeozoic sedimentary rocks <cite>(Cromie, 2010</cite>; <cite>Workman, 1997)</cite>. Common sulphide minerals in the Sepon mineral district are pyrite, arsenic-rich pyrite, chalcopyrite, minor sphalerite, galena, bornite and stibnite <cite>(Workman, 1997)</cite>. </p>
 	<p>Gold mineralisation occurring as fine dissemination is predominantly hosted by highly altered calcareous shale <cite>(Manini & Albert, online)</cite>. </p>
 	<p>The supergene copper enrichment derived from the weathering of a replacement style massive sulphide deposits developed in carbonate rocks was discovered at three deposits, namely Khonong, Thengkham North and Thengkham South <cite>(Workman, 1997)</cite>. Among them the Khonong lode is the biggest and richest one. Copper minerals present are mainly chalcocite, with minor covellite, malachite, azurite and same native copper <cite>(Baxter, Dreisinger, & Pratt, online)</cite>. </p>
-	<p>Above the enrichment zone there is a well-developed lateritic profile which forms a leached cup to the supergene copper mineralisation and comprises gossan, ironstone boulders and red ferruginous clay soils. It is generally assumed that copper is leached away from the laterite <cite>(Baxter et al., online)</cite>. </p>
+	<p>Above the enrichment zone there is a well-developed lateritic profile which forms a leached cup to the supergene copper mineralisation and comprises gossan, ironstone boulders and red ferruginous clay soils. It is generally assumed that copper is leached away from the laterite <cite>(Baxter, Dreisinger, & Pratt, online)</cite>. </p>
 
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="RightSidebar" Runat="Server">
-    <asp:Label ID="lblReferenceTitle" runat="server" Text=""></asp:Label>
+    <asp:Label ID="lblReferenceTitle" runat="server" Text="" CssClass="f"></asp:Label>
 </asp:Content>
 

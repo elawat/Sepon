@@ -81,6 +81,7 @@
     <Content Include="pages\Default.aspx" />
     <Content Include="pages\GeologicalSetting.aspx" />
     <Content Include="pages\Ingot.aspx" />
+    <Content Include="pages\Logon.aspx" />
     <Content Include="pages\PBandTNN.aspx" />
     <Content Include="pages\Pottery.aspx" />
     <Content Include="pages\References.aspx" />
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="pages\Ingot.aspx.designer.cs">
       <DependentUpon>Ingot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\PBandTNN.aspx.cs">
       <DependentUpon>PBandTNN.aspx</DependentUpon>
