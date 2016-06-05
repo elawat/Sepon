@@ -65,12 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\StyleSheet.css" />
+    <Content Include="Default.aspx" />
     <Content Include="images\chronology.jpg" />
     <Content Include="images\homepage.jpg" />
     <Content Include="images\kiwi.png" />
     <Content Include="images\map.png" />
     <Content Include="js\JavaScript.js" />
     <Content Include="js\jquery_functions.js" />
+    <Content Include="Logon.aspx" />
     <Content Include="pages\About.aspx" />
     <Content Include="pages\Acknowledgements.aspx" />
     <Content Include="pages\Analyses.aspx" />
@@ -78,18 +80,44 @@
     <Content Include="pages\Copper Minerals.aspx" />
     <Content Include="pages\Crucible slag.aspx" />
     <Content Include="pages\Crucibles.aspx" />
-    <Content Include="pages\Default.aspx" />
     <Content Include="pages\GeologicalSetting.aspx" />
     <Content Include="pages\Ingot.aspx" />
-    <Content Include="pages\Logon.aspx" />
     <Content Include="pages\PBandTNN.aspx" />
     <Content Include="pages\Pottery.aspx" />
     <Content Include="pages\References.aspx" />
     <Content Include="pages\Slag.aspx" />
     <Content Include="pages\test.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master\About.master.designer.cs">
+      <DependentUpon>About.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\MasterHome.master.designer.cs">
+      <DependentUpon>MasterHome.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\MasterSites.master.designer.cs">
+      <DependentUpon>MasterSites.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\References.master.designer.cs">
+      <DependentUpon>References.master</DependentUpon>
+    </Compile>
     <Compile Include="pages\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -172,13 +200,6 @@
     <Compile Include="pages\Crucibles.aspx.designer.cs">
       <DependentUpon>Crucibles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="pages\GeologicalSetting.aspx.cs">
       <DependentUpon>GeologicalSetting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,13 +213,6 @@
     </Compile>
     <Compile Include="pages\Ingot.aspx.designer.cs">
       <DependentUpon>Ingot.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\Logon.aspx.cs">
-      <DependentUpon>Logon.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\Logon.aspx.designer.cs">
-      <DependentUpon>Logon.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\PBandTNN.aspx.cs">
       <DependentUpon>PBandTNN.aspx</DependentUpon>
@@ -285,6 +299,7 @@
       <DependentUpon>SeponEntities.edmx</DependentUpon>
       <LastGenOutput>SeponEntities.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\SamplesOfSepon.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -27,7 +27,7 @@
     <div class="container">
     <div class="row">
       <div id="toplink" class="col-sm-3">
-        <h1><a href="../pages/Default.aspx" title="Home Page">Samples of Sepon</a></h1>
+        <h1><a href="../Default.aspx" title="Home Page">Samples of Sepon</a></h1>
       </div>
       <div id="toptext" class="col-sm-9">
         <h5>AN INVESTIGATION OF THE METALLURGICAL MATERIAL FROM PEUN BAOLO AND THONG NA NGUAK, LAOS</></h5>
@@ -47,7 +47,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="../Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a href="#">SITE MAP</a></li>
         <li><a href="../pages/About.aspx">ABOUT</a></li>
         <li><a href="../pages/PBandTNN.aspx">PEUN BAOLO & THONG NA NGUAK</a></li>
@@ -82,15 +82,6 @@
 </div>
 
 </div><!--/wrap-->
-
-
-
-<div id="row">
-  <div id="footer" class="panel-footer panel-custom">
-    <p class="p-footer"><a href="../pages/Default.aspx">Investigation of the Metallurgical Material from Peun Baolo and Thong Na Nguak, Laos</a></p>
-    <p class="p-footer"><small>Ela Watroba © 2016</small></p>
-  </div>
-</div>
 
 
 </form>

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterHome.master.cs" Inherits="master_MasterHome" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="master_MasterHome" Codebehind="MasterHome.master.cs" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@
     <div class="container">
     <div class="row">
       <div id="toplink" class="col-sm-3">
-        <h1><a href="../pages/Default.aspx" title="Home Page">Samples of Sepon</a></h1>
+        <h1><a href="../Default.aspx" title="Home Page">Samples of Sepon</a></h1>
       </div>
       <div id="toptext" class="col-sm-9">
         <h5>AN INVESTIGATION OF THE METALLURGICAL MATERIAL FROM PEUN BAOLO AND THONG NA NGUAK, LAOS</></h5>
@@ -46,7 +46,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-         <li><a href="../pages/Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+         <li><a href="../Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a href="#">SITE MAP</a></li>
         <li><a href="../pages/About.aspx">ABOUT</a></li>
         <li><a href="../pages/PBandTNN.aspx">PEUN BAOLO & THONG NA NGUAK</a></li>
@@ -69,7 +69,7 @@
         
    </div> 
 </div>
-            
+
    </div> 
 </div><!--/wrap-->
 
