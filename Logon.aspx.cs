@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.Security;
+using System.Configuration;
 
 namespace Sepon.pages
 {
@@ -22,6 +23,7 @@ namespace Sepon.pages
             SqlConnection conn;
             SqlCommand cmd;
             string lookupPassword = null;
+            
 
             // Check for invalid userName.
             // userName must not be null and must be between 1 and 15 characters.
@@ -43,7 +45,7 @@ namespace Sepon.pages
             {
                 // Consult with your SQL Server administrator for an appropriate connection
                 // string to use to connect to your local SQL Server.
-                conn = new SqlConnection("server=DESKTOP-4491DNA\\SQLEXPRESS;Integrated Security=SSPI;database=Sepon");
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SeponConnectionString"].ConnectionString);
                 conn.Open();
 
                 // Create SqlCommand to select pwd field from users table given supplied userName.

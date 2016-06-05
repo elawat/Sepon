@@ -1,20 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/References.master" AutoEventWireup="true" Inherits="References" Codebehind="References.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+    <script>
 
+function changeText(id,value)
+{
+if(value =="")
+{document.getElementById('SearchCriteriaTextBox').value="Enter Search Criteria";
+}
+
+}
+
+</script>
          <br />
     
     <div class="lookup-box">
-    
-    <asp:Label ID="lblFindAuthor" runat="server" Text="Find author"></asp:Label>
 
     &nbsp;
 
-    <asp:TextBox ID="txbFindAuthor" runat="server" Height="25px" Width="150px"></asp:TextBox>
+    <asp:TextBox ID="txbFindAuthor" runat="server" Height="25px" Width="250px" value="Enter Search Criteria" ForeColor="GrayText" OnClick="this.value = ''; this.style.color = 'black'" OnBlur="javascript:changeText(this.id,this.value)"></asp:TextBox>
   
     &nbsp;
   
-    <asp:Button ID="btnFindAuthor" runat="server" Text="Find" Height="25px" OnClick="btnFindAuthor_Click" Width="100px" />
+    <asp:Button ID="btnFindAuthor" runat="server" Text="Search" Height="25px" OnClick="btnFindAuthor_Click" Width="100px" />
     
     </div>
 
