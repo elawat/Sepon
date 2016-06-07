@@ -80,6 +80,7 @@
     <Content Include="pages\Copper Minerals.aspx" />
     <Content Include="pages\Crucible slag.aspx" />
     <Content Include="pages\Crucibles.aspx" />
+    <Content Include="pages\Data.aspx" />
     <Content Include="pages\GeologicalSetting.aspx" />
     <Content Include="pages\Ingot.aspx" />
     <Content Include="pages\PBandTNN.aspx" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="master\About.master.designer.cs">
       <DependentUpon>About.master</DependentUpon>
+    </Compile>
+    <Compile Include="master\Data.master.cs">
+      <DependentUpon>Data.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\Data.master.designer.cs">
+      <DependentUpon>Data.master</DependentUpon>
     </Compile>
     <Compile Include="master\MasterHome.master.designer.cs">
       <DependentUpon>MasterHome.master</DependentUpon>
@@ -199,6 +207,13 @@
     </Compile>
     <Compile Include="pages\Crucibles.aspx.designer.cs">
       <DependentUpon>Crucibles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Data.aspx.cs">
+      <DependentUpon>Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Data.aspx.designer.cs">
+      <DependentUpon>Data.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\GeologicalSetting.aspx.cs">
       <DependentUpon>GeologicalSetting.aspx</DependentUpon>
@@ -299,6 +314,7 @@
       <DependentUpon>SeponEntities.edmx</DependentUpon>
       <LastGenOutput>SeponEntities.cs</LastGenOutput>
     </Content>
+    <Content Include="master\Data.master" />
     <None Include="Properties\PublishProfiles\SamplesOfSepon.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

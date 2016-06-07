@@ -16,19 +16,13 @@ if(value =="")
     
     <div class="lookup-box">
 
-    &nbsp;
-
     <asp:TextBox ID="txbFindAuthor" runat="server" Height="25px" Width="250px" value="Enter Search Criteria" ForeColor="GrayText" OnClick="this.value = ''; this.style.color = 'black'" OnBlur="javascript:changeText(this.id,this.value)"></asp:TextBox>
-  
-    &nbsp;
-  
+ 
     <asp:Button ID="btnFindAuthor" runat="server" Text="Search" Height="25px" OnClick="btnFindAuthor_Click" Width="100px" />
     
     </div>
 
     <br />
-
-    
     
     <asp:GridView ID="GridViewReferences" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSepon">
         <AlternatingRowStyle BackColor="#EAE9CA" /> 

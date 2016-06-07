@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/master/Parent.master" AutoEventWireup="true" CodeBehind="Data.master.cs" Inherits="Sepon.master.Data" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <ul class="list-unstyled sidebar-nav">
+        <li><a href="../pages/Data.aspx"><h4>Browse Samples</h4></a></li>
+        <li><a href="#"><h4>Access SEM Results</h4></a></li>
+     </ul>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div class="access-data-form">
+        <asp:ContentPlaceHolder id="AccessFormContent" runat="server">
+          
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <asp:ContentPlaceHolder id="RightSidebar" runat="server">
+  </asp:ContentPlaceHolder>
+</asp:Content>
