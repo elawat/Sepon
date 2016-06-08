@@ -9,6 +9,7 @@ LINKS
 MAIN       centralrow, leftcol, centralcol, sidebar-nav, homerow
 Buttons
 IMAGES
+TABLES
 FOOTER
 */
 
@@ -21,7 +22,7 @@ Colours
     light grey	#EAE9CA: sidenav, gridview alternating rows, footer
     dark	#3B0624: navbar links
     white	#FFFFFF
-    grey #3F3F3F: sidebar-nav links
+    grey #3F3F3F: sidebar-nav links, accessdatatables borders
 
 <p> in centralcol
     with indentation
@@ -246,6 +247,10 @@ img.img-center {
     
 }
 
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+
 .access-data-form {
     margin-left: auto;
     margin-right: auto;
@@ -255,52 +260,43 @@ img.img-center {
     /*background-color: red;*/
     border: none;
 }
+
+td {
+    padding: 4px;
+}
 #ObjectsForm {
      width: 806px; 
     
 }
-td{
+td.dataform {
     padding: 8px;
     align-content: stretch;
-    border-color: gray;
     border: solid;
-     border-width: thin;
-     border-color: gray;
+    border-width: 1px;
+     border-color: #3F3F3F;
 }
 
-td.tdhead {
+#tdheader {
     text-align: center; 
-    border-width: thin;
-     border-color: gray;
-    border: inset;
-    
 }
-td.td1 {
-     
-     border-width: thin;
-     border-color: gray;
-    border: inset;
-}
-td.td2 {
-     
-     border-width: thin;
-     border-color: gray;
-    border: inset;
+
+td.dataformbold {  
+    padding: 8px;
+    align-content: stretch;
+    border: solid;
+    border-width: 1px;
+    border-color: #3F3F3F;
     font-weight: 600;
 }
 
-td.td3 {
-     
-     border-width: thin;
-     border-color: gray;
-    border: inset;
-}
-
-td.td4 {
+td.dataformright {
+    padding: 8px;
+    align-content: stretch;
+    border: solid;
+    border-width: 1px;
+    border-color: #3F3F3F;
     text-align: right;
-     border-width: thin;
-     border-color: gray;
-    border: inset;
+     
 }
 /*------------------------------------*\
     $FOOTER

@@ -5,6 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        #txtUserPass {
+            width: 125px;
+        }
+        #txtUserName {
+            width: 125px;
+        }
+    </style>
 </head>
 <body>
     <form id="LoginForm" runat="server">
