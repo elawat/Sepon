@@ -5,6 +5,7 @@
 <head runat="server">
   <title></title>
   <asp:ContentPlaceHolder id="head" runat="server">
+
   </asp:ContentPlaceHolder>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +17,7 @@
   <link href="../css/StyleSheet.css" rel="stylesheet" />
 </head>
 
-<body>
+<body id="sitemap">
 <form id="form2" runat="server">
 
 <!-- Wrap all page content here -->
@@ -63,11 +64,12 @@
 
 <div class="container-fluid" id="homerow">
 <div class="row" id="homerow2">
-  <div class="col-sm-12 container-fluid" id="homerow3" >
-      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-       </asp:ContentPlaceHolder>
-        
-   </div> 
+  <div class="col-sm-12 container-fluid" >
+      
+    <div id="sitemaplink"> <h1>bvubub</h1>  </div>
+            
+   </div>
+     
 </div>
 
    </div> 

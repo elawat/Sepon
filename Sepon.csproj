@@ -100,6 +100,9 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Image.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Logon.aspx.cs">
       <DependentUpon>Logon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,7 +272,19 @@
     <Compile Include="Reference.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ResultsToSample_Lookup.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Sample.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SamplesToObject_Lookup.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Samples_New.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEM_Results.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="SeponEntities.Context.cs">
@@ -286,6 +301,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SeponEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

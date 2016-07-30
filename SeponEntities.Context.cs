@@ -27,5 +27,11 @@ namespace Sepon
     
         public DbSet<Reference> References { get; set; }
         public DbSet<Sample> Samples { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<ResultsToSample_Lookup> ResultsToSample_Lookup { get; set; }
+        public DbSet<Samples_New> Samples_New { get; set; }
+        public DbSet<SamplesToObject_Lookup> SamplesToObject_Lookup { get; set; }
+        public DbSet<SEM_Results> SEM_Results { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

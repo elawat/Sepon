@@ -9,8 +9,7 @@
            
              var RefID = FormatRefID($(this).text());
 
-             var pos = $(this).offset();
-             $('#<%= lblReferenceTitle.ClientID %>').offset({ top: pos.top});
+             $('#<%= lblReferenceTitle.ClientID %>').offset({ top: 150 + document.body.scrollTop });
 
              $.ajax({
                  method: "post",
@@ -47,6 +46,6 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="RightSidebar" Runat="Server">
-    <asp:Label ID="lblReferenceTitle" runat="server" Text="" CssClass="lblRef"></asp:Label>
+    <asp:Label ID="lblReferenceTitle" runat="server" Text="" CssClass="citation"></asp:Label>
 </asp:Content>
 

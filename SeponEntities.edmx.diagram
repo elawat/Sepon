@@ -7,6 +7,12 @@
       <Diagram DiagramId="952a7d3d5eb44f72b456502e68b26d19" Name="Diagram1">
         <EntityTypeShape EntityType="SeponModel.Reference" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SeponModel.Sample" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SeponModel.Image" Width="1.5" PointX="1.125" PointY="3.5" />
+        <EntityTypeShape EntityType="SeponModel.ResultsToSample_Lookup" Width="1.5" PointX="3.125" PointY="3.5" />
+        <EntityTypeShape EntityType="SeponModel.Samples_New" Width="1.5" PointX="5.125" PointY="3.5" />
+        <EntityTypeShape EntityType="SeponModel.SamplesToObject_Lookup" Width="1.5" PointX="6.125" PointY="0.5" />
+        <EntityTypeShape EntityType="SeponModel.SEM_Results" Width="1.5" PointX="1.125" PointY="6.5" />
+        <EntityTypeShape EntityType="SeponModel.User" Width="1.5" PointX="3.125" PointY="6.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

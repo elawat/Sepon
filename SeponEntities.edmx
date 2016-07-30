@@ -5,12 +5,28 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="SeponModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="Img_ID" />
+          </Key>
+          <Property Name="Img_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Img_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="No_Of_Analyses" Type="int" />
+          <Property Name="Img_Description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="References">
           <Key>
             <PropertyRef Name="Reference_ID" />
           </Key>
           <Property Name="Reference_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ResultsToSample_Lookup">
+          <Key>
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Samples">
           <Key>
@@ -23,9 +39,77 @@
           <Property Name="Object_Type" Type="nvarchar" MaxLength="100" />
           <Property Name="Analysed" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="Samples_New">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sample_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Object_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Analysed" Type="bit" />
+        </EntityType>
+        <EntityType Name="SamplesToObject_Lookup">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+            <PropertyRef Name="Obj_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Obj_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SEM_Results">
+          <Key>
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Gen_Img_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEM_Img_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEM_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsBulk" Type="bit" />
+          <Property Name="IsResult" Type="bit" />
+          <Property Name="Cause_Of_Error" Type="nvarchar" MaxLength="500" />
+          <Property Name="Img_identifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SO3" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="CaO" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="ZnO" Type="float" />
+          <Property Name="FeS2" Type="float" />
+          <Property Name="Eu2O3" Type="float" />
+          <Property Name="MoO3" Type="float" />
+          <Property Name="Al" Type="float" />
+          <Property Name="Br" Type="float" />
+          <Property Name="Mg" Type="float" />
+          <Property Name="Si" Type="float" />
+          <Property Name="O" Type="float" />
+          <Property Name="S" Type="float" />
+          <Property Name="Fe" Type="float" />
+          <Property Name="Cu" Type="float" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="uname" />
+          </Key>
+          <Property Name="uname" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Pwd" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="userRole" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="SeponModelStoreContainer">
+          <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="References" EntityType="Self.References" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ResultsToSample_Lookup" EntityType="Self.ResultsToSample_Lookup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Samples" EntityType="Self.Samples" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Samples_New" EntityType="Self.Samples_New" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SamplesToObject_Lookup" EntityType="Self.SamplesToObject_Lookup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEM_Results" EntityType="Self.SEM_Results" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -41,6 +125,12 @@
         <EntityContainer Name="SeponEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="References" EntityType="Self.Reference" />
           <EntitySet Name="Samples" EntityType="SeponModel.Sample" />
+          <EntitySet Name="Images" EntityType="SeponModel.Image" />
+          <EntitySet Name="ResultsToSample_Lookup" EntityType="SeponModel.ResultsToSample_Lookup" />
+          <EntitySet Name="Samples_New" EntityType="SeponModel.Samples_New" />
+          <EntitySet Name="SamplesToObject_Lookup" EntityType="SeponModel.SamplesToObject_Lookup" />
+          <EntitySet Name="SEM_Results" EntityType="SeponModel.SEM_Results" />
+          <EntitySet Name="Users" EntityType="SeponModel.User" />
         </EntityContainer>
         <EntityType Name="Sample">
           <Key>
@@ -52,6 +142,84 @@
           <Property Name="Sample_No" Type="Int32" />
           <Property Name="Object_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Analysed" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Img_ID" />
+          </Key>
+          <Property Name="Img_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Img_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="No_Of_Analyses" Type="Int32" />
+          <Property Name="Img_Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ResultsToSample_Lookup">
+          <Key>
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="SEM_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Samples_New">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Object_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Analysed" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SamplesToObject_Lookup">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+            <PropertyRef Name="Obj_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Obj_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SEM_Results">
+          <Key>
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="SEM_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Img_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEM_Img_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEM_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsBulk" Type="Boolean" />
+          <Property Name="IsResult" Type="Boolean" />
+          <Property Name="Cause_Of_Error" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Img_identifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MgO" Type="Double" />
+          <Property Name="Al2O3" Type="Double" />
+          <Property Name="SiO2" Type="Double" />
+          <Property Name="P2O5" Type="Double" />
+          <Property Name="SO3" Type="Double" />
+          <Property Name="K2O" Type="Double" />
+          <Property Name="CaO" Type="Double" />
+          <Property Name="TiO2" Type="Double" />
+          <Property Name="MnO" Type="Double" />
+          <Property Name="FeO" Type="Double" />
+          <Property Name="CuO" Type="Double" />
+          <Property Name="ZnO" Type="Double" />
+          <Property Name="FeS2" Type="Double" />
+          <Property Name="Eu2O3" Type="Double" />
+          <Property Name="MoO3" Type="Double" />
+          <Property Name="Al" Type="Double" />
+          <Property Name="Br" Type="Double" />
+          <Property Name="Mg" Type="Double" />
+          <Property Name="Si" Type="Double" />
+          <Property Name="O" Type="Double" />
+          <Property Name="S" Type="Double" />
+          <Property Name="Fe" Type="Double" />
+          <Property Name="Cu" Type="Double" />
+          <Property Name="Total" Type="Double" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="uname" />
+          </Key>
+          <Property Name="uname" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Pwd" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="userRole" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -76,6 +244,89 @@
                 <ScalarProperty Name="Sample_Type" ColumnName="Sample_Type" />
                 <ScalarProperty Name="Object_ID" ColumnName="Object_ID" />
                 <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="SeponModel.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="Img_Description" ColumnName="Img_Description" />
+                <ScalarProperty Name="No_Of_Analyses" ColumnName="No_Of_Analyses" />
+                <ScalarProperty Name="Img_Type" ColumnName="Img_Type" />
+                <ScalarProperty Name="Img_ID" ColumnName="Img_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResultsToSample_Lookup">
+            <EntityTypeMapping TypeName="SeponModel.ResultsToSample_Lookup">
+              <MappingFragment StoreEntitySet="ResultsToSample_Lookup">
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
+                <ScalarProperty Name="SEM_ID" ColumnName="SEM_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Samples_New">
+            <EntityTypeMapping TypeName="SeponModel.Samples_New">
+              <MappingFragment StoreEntitySet="Samples_New">
+                <ScalarProperty Name="Analysed" ColumnName="Analysed" />
+                <ScalarProperty Name="Object_Type" ColumnName="Object_Type" />
+                <ScalarProperty Name="Sample_Type" ColumnName="Sample_Type" />
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SamplesToObject_Lookup">
+            <EntityTypeMapping TypeName="SeponModel.SamplesToObject_Lookup">
+              <MappingFragment StoreEntitySet="SamplesToObject_Lookup">
+                <ScalarProperty Name="Obj_ID" ColumnName="Obj_ID" />
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEM_Results">
+            <EntityTypeMapping TypeName="SeponModel.SEM_Results">
+              <MappingFragment StoreEntitySet="SEM_Results">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Cu" ColumnName="Cu" />
+                <ScalarProperty Name="Fe" ColumnName="Fe" />
+                <ScalarProperty Name="S" ColumnName="S" />
+                <ScalarProperty Name="O" ColumnName="O" />
+                <ScalarProperty Name="Si" ColumnName="Si" />
+                <ScalarProperty Name="Mg" ColumnName="Mg" />
+                <ScalarProperty Name="Br" ColumnName="Br" />
+                <ScalarProperty Name="Al" ColumnName="Al" />
+                <ScalarProperty Name="MoO3" ColumnName="MoO3" />
+                <ScalarProperty Name="Eu2O3" ColumnName="Eu2O3" />
+                <ScalarProperty Name="FeS2" ColumnName="FeS2" />
+                <ScalarProperty Name="ZnO" ColumnName="ZnO" />
+                <ScalarProperty Name="CuO" ColumnName="CuO" />
+                <ScalarProperty Name="FeO" ColumnName="FeO" />
+                <ScalarProperty Name="MnO" ColumnName="MnO" />
+                <ScalarProperty Name="TiO2" ColumnName="TiO2" />
+                <ScalarProperty Name="CaO" ColumnName="CaO" />
+                <ScalarProperty Name="K2O" ColumnName="K2O" />
+                <ScalarProperty Name="SO3" ColumnName="SO3" />
+                <ScalarProperty Name="P2O5" ColumnName="P2O5" />
+                <ScalarProperty Name="SiO2" ColumnName="SiO2" />
+                <ScalarProperty Name="Al2O3" ColumnName="Al2O3" />
+                <ScalarProperty Name="MgO" ColumnName="MgO" />
+                <ScalarProperty Name="Img_identifier" ColumnName="Img_identifier" />
+                <ScalarProperty Name="Cause_Of_Error" ColumnName="Cause_Of_Error" />
+                <ScalarProperty Name="IsResult" ColumnName="IsResult" />
+                <ScalarProperty Name="IsBulk" ColumnName="IsBulk" />
+                <ScalarProperty Name="SEM_Type" ColumnName="SEM_Type" />
+                <ScalarProperty Name="SEM_Img_ID" ColumnName="SEM_Img_ID" />
+                <ScalarProperty Name="Gen_Img_ID" ColumnName="Gen_Img_ID" />
+                <ScalarProperty Name="SEM_ID" ColumnName="SEM_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SeponModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="userRole" ColumnName="userRole" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
