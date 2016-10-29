@@ -6,3 +6,11 @@ C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\obj\Debug\Sepon.dll
 C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\obj\Debug\Sepon.pdb
 C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\bin\EntityFramework.dll
 C:\Users\Elciak\Documents\Visual Studio 2013\Projects\Sepon\bin\EntityFramework.xml
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\bin\Sepon.dll.config
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\bin\Sepon.dll
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\bin\Sepon.pdb
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\bin\EntityFramework.dll
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\bin\EntityFramework.xml
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\obj\Debug\Sepon.csprojResolveAssemblyReference.cache
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\obj\Debug\Sepon.dll
+C:\Users\elawa\OneDrive\Documents\Visual Studio 2015\Projects\Sepon\obj\Debug\Sepon.pdb
