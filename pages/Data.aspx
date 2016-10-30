@@ -11,54 +11,48 @@
             <td class="dataform" style="width: 120px" rowspan="3">Objects</td>
             <td class="dataformbold" style="height: 22px; width: 201px">Object Type</td>
             <td class="dataform" style="height: 22px; width: 339px">
-                <asp:DropDownList ID="DropDownListObjType" runat="server" DataSourceID="SqlDataSource3" DataTextField="Object_Type" DataValueField="Object_Type" AppendDataBoundItems="true" Width="250px">
-                    <asp:ListItem Text="--Select One--" Value="" />  
+                <asp:DropDownList ID="DropDownListObjType" runat="server" AutoPostBack="True"  AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListObjType_SelectedIndexChanged">
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT DISTINCT [Object_Type] FROM [Samples]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
             <td class="dataformbold" style="width: 201px; height: 32px;">Object ID</td>
             <td class="dataform" style="width: 339px; height: 32px;">
-                <asp:DropDownList ID="DropDownListObjID" runat="server" DataSourceID="SqlDataSource4" DataTextField="Object_ID" DataValueField="Object_ID" AppendDataBoundItems="true" Width="250px">
-                    <asp:ListItem Text="--Select One--" Value="" />  
+                <asp:DropDownList ID="DropDownListObjID" runat="server" AutoPostBack="True" AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListObjID_SelectedIndexChanged">
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT [Object_ID] FROM [Samples]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
             <td class="dataformright" colspan="2">
-                <asp:Button ID="btnObjectsFormObj" runat="server" Text="Button" Width="98px" />
+                <asp:Button ID="btnObjectsFormObj" runat="server" Text="Show information about selected objects" Width="350px" />
             </td>
         </tr>
         <tr>
             <td class="dataform" style="width: 120px" rowspan="4">Samples</td>
             <td class="dataformbold" style="width: 201px">Sample Type</td>
             <td class="dataform" style="width: 339px">
-                <asp:DropDownList ID="DropDownListSplType" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sample_Type" DataValueField="Sample_Type" AppendDataBoundItems="true" Width="250px">
-                    <asp:ListItem Text="--Select One--" Value="" />  
+                <asp:DropDownList ID="DropDownListSplType" runat="server" AutoPostBack="True"  AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListSplType_SelectedIndexChanged">
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT DISTINCT [Sample_Type] FROM [Samples_New]"></asp:SqlDataSource>
+                <!-- <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT DISTINCT [Sample_Type] FROM [Samples_New]"></asp:SqlDataSource>-->
             </td>
         </tr>
         <tr>
             <td class="dataformbold" style="width: 201px">Analysed</td>
             <td class="dataform" style="width: 339px">
-                <asp:CheckBox ID="CheckBoxAnalysed" runat="server" />
-            </td>
+                &nbsp;&nbsp;
+                <asp:CheckBox ID="CheckBoxAnalysed" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBoxAnalysed_CheckedChanged" />
+             </td>
         </tr>
         <tr>
             <td class="dataformbold" style="width: 201px">Sample ID</td>
             <td class="dataform" style="width: 339px">
-                <asp:DropDownList ID="DropDownListSplID" runat="server" DataSourceID="SqlDataSource2" DataTextField="Sample_ID" DataValueField="Sample_ID" AppendDataBoundItems="true" Width="250px">
-                    <asp:ListItem Text="--Select One--" Value="" />  
+                <asp:DropDownList ID="DropDownListSplID" runat="server" AppendDataBoundItems="true" Width="250px"> 
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT [Sample_ID] FROM [Samples_New]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
             <td class="dataformright" colspan="2">
-                <asp:Button ID="btnObjectsFormSpl" runat="server" Text="Button" Width="98px" />
+                <asp:Button ID="btnObjectsFormSpl" runat="server" Text="Show information about selected samples" Width="350px" />
             </td>
         </tr>
         </table>

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data.SqlClient;
+
 
 namespace Sepon
 {
@@ -39,6 +42,26 @@ namespace Sepon
             }
 
 
+        }
+
+        public void BindDropDownList(DropDownList ddl, string query, string text, string value, string defaultText)
+        {
+            string conString = ConfigurationManager.ConnectionStrings["SeponConnectionString"].ConnectionString;
+            SqlCommand cmd = new SqlCommand(query);
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmd.Connection = con;
+                    con.Open();
+                    ddl.DataSource = cmd.ExecuteReader();
+                    ddl.DataTextField = text;
+                    ddl.DataValueField = value;
+                    ddl.DataBind();
+                    con.Close();
+                }
+            }
+            ddl.Items.Insert(0, new ListItem(defaultText));
         }
     }
 }
