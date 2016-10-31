@@ -13,6 +13,7 @@ namespace Sepon.pages
         {
             if (!IsPostBack)
             {
+                btnShowFilter.Visible = false;
                 //DropDownListObjType
                 DropDownListObjType.Items.Clear();
                 string query = "SELECT DISTINCT [Object_Type] FROM [Objects]";
@@ -194,6 +195,17 @@ namespace Sepon.pages
             BindDropDownList(DropDownListSplID, query, "Sample_ID", "Sample_ID", "Select ID");
         }
 
-        
+        protected void btnObjectsFormObj_Click(object sender, EventArgs e)
+        {
+            ObjectsForm.Visible = false;
+            btnShowFilter.Visible = true;
+
+        }
+
+        protected void btnShowFilter_Click(object sender, EventArgs e)
+        {
+            ObjectsForm.Visible = true;
+            btnShowFilter.Visible = false;
+        }
     }
 }

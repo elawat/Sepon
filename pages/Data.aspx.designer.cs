@@ -13,6 +13,33 @@ namespace Sepon.pages {
     public partial class Data {
         
         /// <summary>
+        /// btnShowFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnShowFilter;
+        
+        /// <summary>
+        /// ObjectsForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable ObjectsForm;
+        
+        /// <summary>
+        /// tdheader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tdheader;
+        
+        /// <summary>
         /// DropDownListObjType control.
         /// </summary>
         /// <remarks>

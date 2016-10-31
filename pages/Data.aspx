@@ -2,8 +2,9 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AccessFormContent" runat="server">
-     
-    <table id="ObjectsForm">
+    
+    <asp:Button ID="btnShowFilter" runat="server" Text="Show Filter" OnClick="btnShowFilter_Click" />
+    <table id="ObjectsForm" runat="server">
         <tr>
             <td class="dataform" ID="tdheader" style="height: 22px; " colspan="3">Select object or sample to retrieve information and photos</td>
         </tr>
@@ -24,7 +25,7 @@
         </tr>
         <tr>
             <td class="dataformright" colspan="2">
-                <asp:Button ID="btnObjectsFormObj" runat="server" Text="Show information about selected objects" Width="350px" />
+                <asp:Button ID="btnObjectsFormObj" runat="server" Text="Show information about selected objects" Width="350px" OnClick="btnObjectsFormObj_Click" />
             </td>
         </tr>
         <tr>
