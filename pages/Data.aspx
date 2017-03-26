@@ -58,7 +58,12 @@
         </tr>
         </table>
 
+    <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYmYzZmFjNmUtYjA2ZS00ZTBmLTk0NjktMzQxYzllMzllYjk3IiwidCI6Ijc4N2ZlMzg1LTJjZTAtNGJjYS04YmZhLTBmZjQ0ZWNhNjc5YyIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="RightSidebar" runat="server">
+  <div id="divInstr">
+    <p><small> Here you can retrieve summarised information about selected category of artefacts by choosing object type or access detailed profile of particular object or sample by defining your search down.</small><p> 
+  </div>
 </asp:Content>

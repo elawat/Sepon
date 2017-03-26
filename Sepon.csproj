@@ -75,6 +75,7 @@
     <Content Include="js\jquery_functions.js" />
     <Content Include="Logon.aspx" />
     <Content Include="pages\About.aspx" />
+    <Content Include="pages\Website.aspx" />
     <Content Include="pages\Acknowledgements.aspx" />
     <Content Include="pages\Analyses.aspx" />
     <Content Include="pages\Analytical methods.aspx" />
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="master\References.master.designer.cs">
       <DependentUpon>References.master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Website.aspx.cs">
+      <DependentUpon>Website.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Website.aspx.designer.cs">
+      <DependentUpon>Website.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -339,6 +347,7 @@
       <LastGenOutput>SeponEntities.cs</LastGenOutput>
     </Content>
     <Content Include="master\Data.master" />
+    <Content Include="download\An investigation of the metallurgical material from Peun Baolo and Thong Na Nguak.pdf" />
     <None Include="Properties\PublishProfiles\SamplesOfSepon.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

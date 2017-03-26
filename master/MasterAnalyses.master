@@ -24,9 +24,9 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
-    <asp:GridView ID="GridViewSamplesRight" Runat="Server" Width="300px">
+    <%--<asp:GridView ID="GridViewSamplesRight" Runat="Server" Width="300px">
         <AlternatingRowStyle BackColor="#EAE9CA" /> 
-        </asp:GridView>
+        </asp:GridView>--%>
 
     <asp:ContentPlaceHolder id="RightSidebar" runat="server">
 

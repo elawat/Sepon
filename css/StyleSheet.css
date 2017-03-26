@@ -195,7 +195,19 @@ p > cite {
 }
 
 /*--- $IMAGES ---*/
+iframe {
+  
+  width: 800px;
+  height: 1123px; 
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
+#PowerBI {
+ 
+   
+}
 
 #kiwi {
     float: right;

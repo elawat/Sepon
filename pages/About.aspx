@@ -2,6 +2,8 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+   <p> I created this website because I wanted to learn creating websites. Thus, I see its value in rather being a good exercise than in presenting the content. While admitting it I also would like to add that I selected the topic because of the data, results of almost 1000 EDS analyses I’ve done, owned and could use for learning server-side development, and they were made fully available, as accurately as possible, so I hope they can be interesting or useful also for somebody else. </p>
+   <br />
    <p> The website presents the results of my master dissertation together with all the data I gathered during its preparation. I have made available an almost unchanged version of the original paper. As such, it inherits all the imperfections of an assessment work (please see Feedback section for more details). </p>
    <br />
    <p><small>The dissertation was submitted in partial fulfilment of the requirements for the degree of MSc in the Technology and Analysis of Archaeological Materials of University College London in 2012.</small></p>

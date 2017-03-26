@@ -68,12 +68,12 @@
      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
   </asp:ContentPlaceHolder>
   </div>
-  <div id="centralcol" class="col-sm-7">
+  <div id="centralcol" class="col-sm-8">
       <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
           
   </asp:ContentPlaceHolder>
   </div>
-  <div id="rightcol" class="col-sm-3">
+  <div id="rightcol" class="col-sm-2">
       
       <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
           
