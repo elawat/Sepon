@@ -23,21 +23,30 @@ Colours
 <p> in centralcol
     with indentation
     class no-indent without indentation
+
+    407F7F
+    477187
+
+    niebieski ciemny: 2B4B6F
+    jasny niebieski: 52769F
+    jasny zielony (linki side nav): 26CECE
+    26CECE
+
 */
 
-
+html, body { margin: 0 }
 
 /*--- $HEADER --- */
     
 .masthead {
-    border-bottom: groove;
-    border-bottom-color: #B63C25;
-    border-top-color: #3B0624;
-    background-color: white;
+    /*border-bottom: groove;
+    border-bottom-color: #2B4B6F;
+    border-top-color: #2B4B6F;*/
+    background-color: #2B4B6F;
 }
 
 .masthead a {
-    color: #B63C25;
+    color: white;
 }
 
 #toplink {
@@ -52,7 +61,7 @@ Colours
 }
 
 #toptext h5 {
-     color: #3B0624;
+     color: white;
 }
 
 /*--- $NAVBAR ---*/
@@ -61,21 +70,22 @@ Colours
     background-color: #FFFFFF;
     margin: 0px;
     border: 0;
+    
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #3B0624;
+    color: #2B4B6F;
     font-weight: 700;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
     color: #FFFFFF;
-    background-color: #B63C25;
+    background-color: #2B4B6F;
 }
 
 .navbar-default .navbar-nav > li > a:focus {
     color: #FFFFFF;
-    background-color: #B63C25;
+    background-color: #2B4B6F;
 }
 
 /*--- $LINKS ---*/
@@ -92,7 +102,7 @@ a:visited {
 }
 
 a:hover {
-    color: #B63C25;
+    color: #26CECE;
     text-decoration: none;
 }
 
@@ -109,12 +119,12 @@ a:active {
 }
 
 .download:focus  {
-    color: #B63C25;
+    color: #26CECE;
     text-decoration: none;
 }
 
 .download:hover {
-    color: #B63C25;
+    color: #26CECE;
     text-decoration: none;
 }
 
@@ -144,23 +154,23 @@ a:active {
 }
 
 .sidebar-nav {
-     margin:20px 0px 10px 0;  
+     margin:20px 0px 20px 0;  
      padding: 5px 0px 5px 5px;
-     background-color: #EAE9CA; 
+     background-color: #52769F; 
 }
 
 .sidebar-nav > li > a {
     text-decoration: none;
     font-weight: 400;
-    color: #3F3F3F;
+    color: #FFFFFF;
 }
 
 .sidebar-nav > li > a:hover{
-   color: #B63C25;
+   color: #69EBC4;
 }
 
 .sidebar-nav > li > a:focus {
-    color: #B63C25;
+    color: #69EBC4;
 }
 
 #homerow, #homerow2, #homerow3 {
@@ -242,8 +252,8 @@ img.img-center {
 /*--- $HomePageImage --- */
 
 #home {
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     /*margin: 0px;
     padding: 0px;*/
 }

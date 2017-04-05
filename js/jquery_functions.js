@@ -14,3 +14,15 @@ function FormatRefID(RefID) {
     var newRefID = RefID
     return newRefID
 }
+
+$(document).ready(function () {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('leftcol').css('min-height', windowHeight);
+    };
+    setHeight();
+
+    $(window).resize(function () {
+        setHeight();
+    });
+});
