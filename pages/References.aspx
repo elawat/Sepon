@@ -25,7 +25,7 @@ if(value =="")
     <br />
     
     <asp:GridView ID="GridViewReferences" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSepon">
-        <AlternatingRowStyle BackColor="#EAE9CA" /> 
+        <AlternatingRowStyle BackColor="#e6e6e6" /> 
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Reference" SortExpression="Title" />
         </Columns>

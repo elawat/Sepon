@@ -36,6 +36,10 @@ Colours
 
 html, body { margin: 0 }
 
+::selection {
+  background: #e6e6e6; /* WebKit/Blink Browsers */
+}
+
 /*--- $HEADER --- */
     
 .masthead {
@@ -102,7 +106,7 @@ a:visited {
 }
 
 a:hover {
-    color: #26CECE;
+    color: #e6e6e6;
     text-decoration: none;
 }
 
@@ -156,21 +160,25 @@ a:active {
 .sidebar-nav {
      margin:20px 0px 20px 0;  
      padding: 5px 0px 5px 5px;
-     background-color: #52769F; 
+     background-color: white; 
 }
+
 
 .sidebar-nav > li > a {
     text-decoration: none;
-    font-weight: 400;
-    color: #FFFFFF;
+    color: #52769F;
+    display: block;
+    padding: 2px 0px 2px 2px;
 }
 
 .sidebar-nav > li > a:hover{
-   color: #69EBC4;
+   background-color: #52769F; 
+   color: white;
+
 }
 
 .sidebar-nav > li > a:focus {
-    color: #69EBC4;
+    color: white;
 }
 
 #homerow, #homerow2, #homerow3 {

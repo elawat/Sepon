@@ -8,7 +8,7 @@
 
  <figure id="grid">
 <asp:GridView ID="GridViewSamples" runat="server" AutoGenerateColumns="False" DataKeyNames="Sample_ID" DataSourceID="SqlDataSourceSamples" Width="550px">
-    <AlternatingRowStyle BackColor="#EAE9CA" />
+    <AlternatingRowStyle BackColor="#e6e6e6" />
     <Columns>
         <asp:BoundField DataField="Sample_ID" HeaderText="Sample_ID" ReadOnly="True" SortExpression="Sample_ID" />
         <asp:BoundField DataField="Object_ID" HeaderText="Object_ID" SortExpression="Object_ID" />
