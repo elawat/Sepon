@@ -9,16 +9,16 @@
             <td class="dataform" ID="tdheader" style="height: 22px; " colspan="3">Select object or sample to retrieve information and photos</td>
         </tr>
         <tr>
-            <td class="dataform" style="width: 120px" rowspan="3">Objects</td>
-            <td class="dataformbold" style="height: 22px; width: 201px">Object Type</td>
-            <td class="dataform" style="height: 22px; width: 339px">
+            <td class="dataform" style="width: 150px" rowspan="3">Objects</td>
+            <td class="dataformbold" style="height: 22px; width: 250px">Object Type</td>
+            <td class="dataform" style="height: 22px; width: 480px">
                 <asp:DropDownList ID="DropDownListObjType" runat="server" AutoPostBack="True"  AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListObjType_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
-            <td class="dataformbold" style="width: 201px; height: 32px;">Object ID</td>
-            <td class="dataform" style="width: 339px; height: 32px;">
+            <td class="dataformbold" style="width: 250px; height: 32px;">Object ID</td>
+            <td class="dataform" style="width: 480px; height: 32px;">
                 <asp:DropDownList ID="DropDownListObjID" runat="server" AutoPostBack="True" AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListObjID_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
@@ -29,24 +29,24 @@
             </td>
         </tr>
         <tr>
-            <td class="dataform" style="width: 120px" rowspan="4">Samples</td>
-            <td class="dataformbold" style="width: 201px">Sample Type</td>
-            <td class="dataform" style="width: 339px">
+            <td class="dataform" style="width: 150px" rowspan="4">Samples</td>
+            <td class="dataformbold" style="width: 250px">Sample Type</td>
+            <td class="dataform" style="width: 480px">
                 <asp:DropDownList ID="DropDownListSplType" runat="server" AutoPostBack="True"  AppendDataBoundItems="true" Width="250px" OnSelectedIndexChanged="DropDownListSplType_SelectedIndexChanged">
                 </asp:DropDownList>
                 <!-- <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SeponConnectionString %>" SelectCommand="SELECT DISTINCT [Sample_Type] FROM [Samples_New]"></asp:SqlDataSource>-->
             </td>
         </tr>
         <tr>
-            <td class="dataformbold" style="width: 201px">Analysed</td>
-            <td class="dataform" style="width: 339px">
+            <td class="dataformbold" style="width: 250px">Analysed</td>
+            <td class="dataform" style="width: 480px">
                 &nbsp;&nbsp;
                 <asp:CheckBox ID="CheckBoxAnalysed" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBoxAnalysed_CheckedChanged" />
              </td>
         </tr>
         <tr>
-            <td class="dataformbold" style="width: 201px">Sample ID</td>
-            <td class="dataform" style="width: 339px">
+            <td class="dataformbold" style="width: 250px">Sample ID</td>
+            <td class="dataform" style="width: 480px">
                 <asp:DropDownList ID="DropDownListSplID" runat="server" AppendDataBoundItems="true" Width="250px"> 
                 </asp:DropDownList>
             </td>
@@ -58,7 +58,15 @@
         </tr>
         </table>
 
-    <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYmYzZmFjNmUtYjA2ZS00ZTBmLTk0NjktMzQxYzllMzllYjk3IiwidCI6Ijc4N2ZlMzg1LTJjZTAtNGJjYS04YmZhLTBmZjQ0ZWNhNjc5YyIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+<asp:Repeater ID="ImageGallery" runat="server">
+    <ItemTemplate>
+       
+         <asp:Image ID="Image1" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>'  />
+        
+        <br />
+        <br />
+    </ItemTemplate>
+</asp:Repeater>
 
 </asp:Content>
 

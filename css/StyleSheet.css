@@ -54,7 +54,7 @@ html, body { margin: 0 }
 }
 
 #toplink {
-    font-family: Lobster;
+    font-family: Fjalla One;
     padding-bottom: 0px;
 }
 
@@ -75,6 +75,10 @@ html, body { margin: 0 }
     margin: 0px;
     border: 0;
     
+}
+
+.navbar-default .navbar-nav > li  {
+    padding: 0px 0px 0px 15px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -116,8 +120,9 @@ a:active {
 
 .download {
     text-decoration: none;
-    /*font-weight: 700;
-    font-size: 15px;
+    color: #52769F;
+    font-weight: 700;
+    /*font-size: 15px;
     color: #3F3F3F;
     font-style: italic;*/
 }
@@ -158,17 +163,21 @@ a:active {
 }
 
 .sidebar-nav {
-     margin:20px 0px 20px 0;  
-     padding: 5px 0px 5px 5px;
+     margin:10px 0px 20px 0px;  
+     padding: 3px 0px 3px 0px;
      background-color: white; 
 }
 
+/*.sidebar-nav > li {
+    
+}*/
 
 .sidebar-nav > li > a {
     text-decoration: none;
     color: #52769F;
     display: block;
-    padding: 2px 0px 2px 2px;
+    padding: 2px 0px 2px 15px;
+    font-family: Fjalla One;
 }
 
 .sidebar-nav > li > a:hover{
@@ -298,11 +307,7 @@ html {
     
 
 .access-data-form {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    min-width:100%;
-    min-height:100%;
+    
     /*background-color: red;*/
     border: none;
 }
@@ -311,7 +316,13 @@ td {
     padding: 4px;
 }
 #ObjectsForm {
-     width: 806px; 
+    width: 880px;
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    min-width:100%;
+    min-height:100%;*/
     
 }
 td.dataform {
@@ -343,6 +354,10 @@ td.dataformright {
     border-color: #3F3F3F;
     text-align: right;
      
+}
+
+#divInstr {
+    padding: 0px 20px 0px 0px;
 }
 /*--- $FOOTER ----*/
     

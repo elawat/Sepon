@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
+
+
 namespace Sepon.pages
 {
     public partial class Data : BasePage
@@ -14,6 +16,11 @@ namespace Sepon.pages
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            var photos = new List<Photo>();
+            photos.Add(new Photo() { URL = "https://drive.google.com/uc?id=0B4YAEObsVt5LTzI5RFF1VzdrV2s", Name = "Bike" });
+
+            ImageGallery.DataSource = photos;
+            ImageGallery.DataBind();
 
             if (!IsPostBack)
             {
@@ -203,6 +210,7 @@ namespace Sepon.pages
         {
             ObjectsForm.Visible = false;
             btnShowFilter.Visible = true;
+           
 
         }
 

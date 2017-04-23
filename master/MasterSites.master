@@ -6,7 +6,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <ul class="list-unstyled sidebar-nav">
+     <ul class="sidebar-nav">
         <li><a href="../pages/PBandTNN.aspx"><h4>Excavations</h4></a></li>
         <li><a href="../pages/GeologicalSetting.aspx"><h4>Geological Setting</h4></a></li>
      </ul>
