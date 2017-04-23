@@ -14,9 +14,18 @@ namespace Sepon
     
     public partial class Samples_New
     {
+        public Samples_New()
+        {
+            this.ResultsToSample_Lookup = new HashSet<ResultsToSample_Lookup>();
+            this.Objects = new HashSet<Object>();
+        }
+    
         public string Sample_ID { get; set; }
         public string Sample_Type { get; set; }
         public string Object_Type { get; set; }
         public Nullable<bool> Analysed { get; set; }
+    
+        public virtual ICollection<ResultsToSample_Lookup> ResultsToSample_Lookup { get; set; }
+        public virtual ICollection<Object> Objects { get; set; }
     }
 }

@@ -14,9 +14,19 @@ namespace Sepon
     
     public partial class Image
     {
+        public Image()
+        {
+            this.SEM_Results = new HashSet<SEM_Results>();
+            this.SEM_Results1 = new HashSet<SEM_Results>();
+        }
+    
         public string Img_ID { get; set; }
         public string Img_Type { get; set; }
         public Nullable<int> No_Of_Analyses { get; set; }
         public string Img_Description { get; set; }
+    
+        public virtual ICollection<SEM_Results> SEM_Results { get; set; }
+        public virtual ICollection<SEM_Results> SEM_Results1 { get; set; }
+        public virtual ImageURL ImageURL { get; set; }
     }
 }

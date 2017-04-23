@@ -20,7 +20,8 @@ namespace Sepon
         public string SEM_Type { get; set; }
         public Nullable<bool> IsBulk { get; set; }
         public Nullable<bool> IsResult { get; set; }
-        public string Cause_Of_Error { get; set; }
+        public string Comments { get; set; }
+        public Nullable<bool> Normalised { get; set; }
         public string Img_identifier { get; set; }
         public Nullable<double> MgO { get; set; }
         public Nullable<double> Al2O3 { get; set; }
@@ -45,6 +46,41 @@ namespace Sepon
         public Nullable<double> S { get; set; }
         public Nullable<double> Fe { get; set; }
         public Nullable<double> Cu { get; set; }
+        public Nullable<double> Mo { get; set; }
+        public Nullable<double> Ca { get; set; }
+        public Nullable<double> V2O5 { get; set; }
+        public Nullable<double> ZrO2 { get; set; }
+        public Nullable<double> Cl { get; set; }
+        public Nullable<double> SeO2 { get; set; }
+        public Nullable<double> K { get; set; }
+        public Nullable<double> Cu2O { get; set; }
+        public Nullable<double> Fe2O3 { get; set; }
+        public Nullable<double> Sn { get; set; }
+        public Nullable<double> As { get; set; }
+        public Nullable<double> Ni { get; set; }
+        public Nullable<double> Cr { get; set; }
+        public Nullable<double> Na2O { get; set; }
+        public Nullable<double> BaO { get; set; }
+        public Nullable<double> Cr2O3 { get; set; }
+        public Nullable<double> WO3 { get; set; }
+        public Nullable<double> SnO2 { get; set; }
+        public Nullable<double> As2O3 { get; set; }
+        public Nullable<double> PbO { get; set; }
+        public Nullable<double> CoO { get; set; }
+        public Nullable<double> SrO { get; set; }
+        public Nullable<double> Mn { get; set; }
+        public Nullable<double> P { get; set; }
+        public Nullable<double> Ti { get; set; }
+        public Nullable<double> Pb { get; set; }
+        public Nullable<double> La2O3 { get; set; }
+        public Nullable<double> Ce2O3 { get; set; }
+        public Nullable<double> Nd2O3 { get; set; }
+        public Nullable<double> Rh { get; set; }
+        public Nullable<double> Po { get; set; }
         public Nullable<double> Total { get; set; }
+    
+        public virtual Image Image { get; set; }
+        public virtual Image Image1 { get; set; }
+        public virtual ResultsToSample_Lookup ResultsToSample_Lookup { get; set; }
     }
 }

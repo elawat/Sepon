@@ -16,11 +16,7 @@ namespace Sepon.pages
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            var photos = new List<Photo>();
-            photos.Add(new Photo() { URL = "https://drive.google.com/uc?id=0B4YAEObsVt5LTzI5RFF1VzdrV2s", Name = "Bike" });
-
-            ImageGallery.DataSource = photos;
-            ImageGallery.DataBind();
+        
 
             if (!IsPostBack)
             {
@@ -210,7 +206,24 @@ namespace Sepon.pages
         {
             ObjectsForm.Visible = false;
             btnShowFilter.Visible = true;
-           
+
+
+            {
+                string selObject;
+                selObject = DropDownListObjID.SelectedItem.Value;
+                
+                using (SeponEntities dbSepon = new SeponEntities())
+                {
+                    var urls = from url in dbSepon.ImageURLs
+                                             join img in dbSepon.Images on url.Img_ID equals img.Img_ID
+                                         where url.Img_ID.Contains(selObject) && img.Img_Type == "general"
+                                         //where author.Author.Contains(inputAuthor)
+                                         select new { url.URL };
+                    ImageGallery.DataSource = urls.ToList();
+                    ImageGallery.DataBind();
+                }
+            }
+
 
         }
 

@@ -105,6 +105,9 @@
     <Compile Include="Image.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ImageURL.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Logon.aspx.cs">
       <DependentUpon>Logon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +133,9 @@
     </Compile>
     <Compile Include="master\References.master.designer.cs">
       <DependentUpon>References.master</DependentUpon>
+    </Compile>
+    <Compile Include="Object.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="pages\Photo.cs" />
     <Compile Include="pages\Website.aspx.cs">
@@ -278,7 +284,6 @@
     <Compile Include="pages\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -294,13 +299,13 @@
     <Compile Include="Sample.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="SamplesToObject_Lookup.cs">
-      <DependentUpon>SeponEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Samples_New.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="SEM_Results.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEM_ResultsDim.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="SeponEntities.Context.cs">
@@ -317,6 +322,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SeponEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>

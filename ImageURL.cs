@@ -12,9 +12,11 @@ namespace Sepon
     using System;
     using System.Collections.Generic;
     
-    public partial class SamplesToObject_Lookup
+    public partial class ImageURL
     {
-        public string Sample_ID { get; set; }
-        public string Obj_ID { get; set; }
+        public string Img_ID { get; set; }
+        public string URL { get; set; }
+    
+        public virtual Image Image { get; set; }
     }
 }

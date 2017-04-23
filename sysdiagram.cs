@@ -12,12 +12,12 @@ namespace Sepon
     using System;
     using System.Collections.Generic;
     
-    public partial class ResultsToSample_Lookup
+    public partial class sysdiagram
     {
-        public string SEM_ID { get; set; }
-        public string Sample_ID { get; set; }
-    
-        public virtual Samples_New Samples_New { get; set; }
-        public virtual SEM_Results SEM_Results { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -58,7 +58,7 @@
         </tr>
         </table>
 
-<asp:Repeater ID="ImageGallery" runat="server">
+<asp:Datalist ID="ImageGallery" runat="server"  RepeatColumns="2" RepeatDirection="horizontal">
     <ItemTemplate>
        
          <asp:Image ID="Image1" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>'  />
@@ -66,7 +66,7 @@
         <br />
         <br />
     </ItemTemplate>
-</asp:Repeater>
+</asp:Datalist>
 
 </asp:Content>
 

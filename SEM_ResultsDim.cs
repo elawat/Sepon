@@ -12,12 +12,17 @@ namespace Sepon
     using System;
     using System.Collections.Generic;
     
-    public partial class ResultsToSample_Lookup
+    public partial class SEM_ResultsDim
     {
         public string SEM_ID { get; set; }
-        public string Sample_ID { get; set; }
-    
-        public virtual Samples_New Samples_New { get; set; }
-        public virtual SEM_Results SEM_Results { get; set; }
+        public string Gen_Img_ID { get; set; }
+        public string SEM_Img_ID { get; set; }
+        public string SEM_Type { get; set; }
+        public Nullable<bool> IsBulk { get; set; }
+        public Nullable<bool> IsResult { get; set; }
+        public string Comments { get; set; }
+        public Nullable<bool> Normalised { get; set; }
+        public string Img_identifier { get; set; }
+        public Nullable<double> Total { get; set; }
     }
 }
