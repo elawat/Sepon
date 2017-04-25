@@ -58,13 +58,18 @@
         </tr>
         </table>
 
-<asp:Datalist ID="ImageGallery" runat="server"  RepeatColumns="2" RepeatDirection="horizontal">
+<asp:Datalist ID="ImageGallery" runat="server"  RepeatColumns="3" RepeatDirection="horizontal" Width = "500px">
     <ItemTemplate>
-       
-         <asp:Image ID="Image1" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>'  />
+       <br />
+            <table cellpadding = "5px" cellspacing = "0" class="dlTable">
+            <tr>
+                <td>
+         <asp:Image ID="Image1" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>' Width = "200px" Height = "160px" />
         
-        <br />
-        <br />
+       </td>
+            </tr>
+            </table>
+
     </ItemTemplate>
 </asp:Datalist>
 
