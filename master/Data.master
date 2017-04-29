@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" MasterPageFile="~/master/Parent.master" AutoEventWireup="true" CodeBehind="Data.master.cs" Inherits="Sepon.master.Data" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/master/ParentData.master" AutoEventWireup="true" CodeBehind="Data.master.cs" Inherits="Sepon.master.Data" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 

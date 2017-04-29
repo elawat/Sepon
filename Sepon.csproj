@@ -131,6 +131,13 @@
     <Compile Include="master\MasterSites.master.designer.cs">
       <DependentUpon>MasterSites.master</DependentUpon>
     </Compile>
+    <Compile Include="master\ParentData.master.cs">
+      <DependentUpon>ParentData.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\ParentData.master.designer.cs">
+      <DependentUpon>ParentData.master</DependentUpon>
+    </Compile>
     <Compile Include="master\References.master.designer.cs">
       <DependentUpon>References.master</DependentUpon>
     </Compile>
@@ -358,6 +365,7 @@
     </Content>
     <Content Include="master\Data.master" />
     <Content Include="download\An investigation of the metallurgical material from Peun Baolo and Thong Na Nguak.pdf" />
+    <Content Include="master\ParentData.master" />
     <None Include="Properties\PublishProfiles\SamplesOfSepon.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
