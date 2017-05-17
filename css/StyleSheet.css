@@ -172,6 +172,10 @@ a:active {
     
 }*/
 
+.dataelements {
+    margin: 10px 0px 10px 5px;
+    /*padding: 10px 10px 10px 10px;*/
+}
 .sidebar-nav > li > a {
     text-decoration: none;
     color: #52769F;

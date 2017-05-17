@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AccessFormContent" runat="server">
     
-    <asp:Button ID="btnShowFilter" runat="server" Text="Show Filter" OnClick="btnShowFilter_Click" />
+    
     <table id="ObjectsForm" runat="server">
         <tr>
             <td class="dataform" ID="tdheader" style="height: 22px; " colspan="3">Select object or sample to retrieve information and photos</td>
@@ -58,13 +58,23 @@
         </tr>
         </table>
 
-<asp:Datalist ID="ImageGallery" runat="server"  RepeatColumns="3" RepeatDirection="horizontal" Width = "500px">
+<div class="dataelements" id="divtblName" runat="server">
+    <asp:Label ID="lbltblName" runat="server" ></asp:Label>
+</div>
+
+<asp:GridView class="dataelements" ID="GridViewSEMResults" runat="server" Width="100%"
+             CellPadding="0" >
+    <AlternatingRowStyle BackColor="#e6e6e6" /> 
+</asp:GridView>
+
+
+<asp:Datalist class="dataelements" ID="ImageGallery" runat="server"  RepeatColumns="3" RepeatDirection="horizontal" Width = "500px">
     <ItemTemplate>
        <br />
             <table cellpadding = "5px" cellspacing = "0" class="dlTable">
             <tr>
                 <td>
-         <asp:Image ID="Image1" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>' Width = "200px" Height = "160px" />
+         <asp:Image ID="ImageData" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "URL") %>' Width = "200px" Height = "160px" />
         
        </td>
             </tr>
@@ -76,7 +86,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="RightSidebar" runat="server">
-  <div id="divInstr">
-    <p><small> Here you can retrieve summarised information about selected category of artefacts by choosing object type or access detailed profile of particular object or sample by defining your search down.</small><p> 
+  <asp:Button ID="btnShowFilter" runat="server" Text="Show Filter" OnClick="btnShowFilter_Click" />
+    <div id="divInstr" runat="server">
+       
+      <p><small> Here you can retrieve summarised information about selected category of artefacts by choosing object type or access detailed profile of particular object or sample by defining your search down.</small><p> 
   </div>
 </asp:Content>

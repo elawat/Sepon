@@ -16,6 +16,7 @@ namespace Sepon
     {
         public Samples_New()
         {
+            this.ImagesToSample_Lookup = new HashSet<ImagesToSample_Lookup>();
             this.ResultsToSample_Lookup = new HashSet<ResultsToSample_Lookup>();
             this.Objects = new HashSet<Object>();
         }
@@ -25,6 +26,7 @@ namespace Sepon
         public string Object_Type { get; set; }
         public Nullable<bool> Analysed { get; set; }
     
+        public virtual ICollection<ImagesToSample_Lookup> ImagesToSample_Lookup { get; set; }
         public virtual ICollection<ResultsToSample_Lookup> ResultsToSample_Lookup { get; set; }
         public virtual ICollection<Object> Objects { get; set; }
     }

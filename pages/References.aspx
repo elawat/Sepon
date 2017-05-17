@@ -34,7 +34,7 @@ if(value =="")
 
     <br />
 <asp:GridView ID="GridViewSelectedAuthours" runat="server">
-    <AlternatingRowStyle BackColor="#EAE9CA" /> 
+    <AlternatingRowStyle BackColor="#e6e6e6" /> 
 </asp:GridView>
 <br />
 

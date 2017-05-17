@@ -105,6 +105,9 @@
     <Compile Include="Image.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ImagesToSample_Lookup.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ImageURL.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
@@ -330,10 +333,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SeponEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
+      <DependentUpon>SeponEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vPBI_Results_Report.cs">
       <DependentUpon>SeponEntities.tt</DependentUpon>
     </Compile>
   </ItemGroup>

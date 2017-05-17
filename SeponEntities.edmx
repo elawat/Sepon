@@ -14,6 +14,13 @@
           <Property Name="No_Of_Analyses" Type="int" />
           <Property Name="Img_Description" Type="nvarchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="ImagesToSample_Lookup">
+          <Key>
+            <PropertyRef Name="Img_ID" />
+          </Key>
+          <Property Name="Img_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="ImageURL">
           <Key>
             <PropertyRef Name="Img_ID" />
@@ -195,6 +202,219 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <Property Name="Pwd" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="userRole" Type="varchar" MaxLength="25" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCrucibleBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCrucibleBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCrucibleBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCrucibleBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="CaO" Type="float" />
+          <Property Name="Cl" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="TiO2" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCrucibleSlagBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCrucibleSlagBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCrucibleSlagBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCrucibleSlagBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="BaO" Type="float" />
+          <Property Name="CaO" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="SnO2" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="ZnO" Type="float" />
+          <Property Name="ZrO2" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCuIngotBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCuIngotBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vCuIngotBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vCuIngotBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cu" Type="float" />
+          <Property Name="O" Type="float" />
+          <Property Name="S" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vMineralBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vMineralBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vMineralBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vMineralBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cl" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="SO3" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vPBI_AveBulkResults_Report' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vPBI_AveBulkResults_Report">
+          <Property Name="OBJECT_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Object_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="N" Type="int" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="Cao" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="SO3" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="ZnO" Type="float" />
+          <Property Name="Total" Type="float" />
+          <Property Name="SiO2ToAl2O3Ratio" Type="float" />
+          <Property Name="MgO_StDev" Type="float" />
+          <Property Name="Al2O3_StDev" Type="float" />
+          <Property Name="SiO2_StDev" Type="float" />
+          <Property Name="P2O5_StDev" Type="float" />
+          <Property Name="K2O_StDev" Type="float" />
+          <Property Name="CaO_StDev" Type="float" />
+          <Property Name="TiO2_StDev" Type="float" />
+          <Property Name="Feo_StDev" Type="float" />
+          <Property Name="CuO_StDev" Type="float" />
+          <Property Name="SO3_StDev" Type="float" />
+          <Property Name="MnO_StDev" Type="float" />
+          <Property Name="ZnO_StDev" Type="float" />
+          <Property Name="Total_StDev" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Sepon.dbo.vPBI_Results_Report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vPBI_Results_Report">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Object_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sample_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sample_No" Type="int" />
+          <Property Name="Object_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Analysed" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Gen_Img_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEM_Img_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEM_Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsBulk" Type="bit" />
+          <Property Name="IsResult" Type="bit" />
+          <Property Name="Cause_Of_Error" Type="nvarchar" MaxLength="500" />
+          <Property Name="Img_identifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SO3" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="CaO" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="ZnO" Type="float" />
+          <Property Name="FeS2" Type="float" />
+          <Property Name="Eu2O3" Type="float" />
+          <Property Name="MoO3" Type="float" />
+          <Property Name="Al" Type="float" />
+          <Property Name="Br" Type="float" />
+          <Property Name="Mg" Type="float" />
+          <Property Name="Si" Type="float" />
+          <Property Name="O" Type="float" />
+          <Property Name="S" Type="float" />
+          <Property Name="Fe" Type="float" />
+          <Property Name="Cu" Type="float" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vPotteryBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vPotteryBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vPotteryBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vPotteryBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="SO3" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="V2O5" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vSlagBulkResults' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vSlagBulkResults">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="OxideElement" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultInPercentage" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Sepon.dbo.vSlagBulkResultsPivot' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vSlagBulkResultsPivot">
+          <Property Name="SEM_ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Al2O3" Type="float" />
+          <Property Name="BaO" Type="float" />
+          <Property Name="CaO" Type="float" />
+          <Property Name="CuO" Type="float" />
+          <Property Name="Eu2O3" Type="float" />
+          <Property Name="FeO" Type="float" />
+          <Property Name="K2O" Type="float" />
+          <Property Name="MgO" Type="float" />
+          <Property Name="MnO" Type="float" />
+          <Property Name="MoO3" Type="float" />
+          <Property Name="Na2O" Type="float" />
+          <Property Name="P2O5" Type="float" />
+          <Property Name="SiO2" Type="float" />
+          <Property Name="SO3" Type="float" />
+          <Property Name="TiO2" Type="float" />
+          <Property Name="ZnO" Type="float" />
+        </EntityType>-->
         <Association Name="fk_GenImg">
           <End Role="Images" Type="Self.Images" Multiplicity="0..1" />
           <End Role="SEM_Results" Type="Self.SEM_Results" Multiplicity="*" />
@@ -204,6 +424,18 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
             </Principal>
             <Dependent Role="SEM_Results">
               <PropertyRef Name="Gen_Img_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ImagesSampleID">
+          <End Role="Samples_New" Type="Self.Samples_New" Multiplicity="0..1" />
+          <End Role="ImagesToSample_Lookup" Type="Self.ImagesToSample_Lookup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Samples_New">
+              <PropertyRef Name="Sample_ID" />
+            </Principal>
+            <Dependent Role="ImagesToSample_Lookup">
+              <PropertyRef Name="Sample_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -279,8 +511,121 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="pCreatevCrucibleBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pCreatevCrucibleSlagBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pCreatevCuIngotBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pCreatevMineralBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pCreatevPotteryBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pCreatevSlagBulkResultsPivot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="pETLImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spInsertImages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Img_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Img_Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="No_Of_Analyses" Type="int" Mode="In" />
+          <Parameter Name="Img_Description" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spInsertObjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Object_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object_Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object_Description_Short" Type="nvarchar" Mode="In" />
+          <Parameter Name="Photo" Type="bit" Mode="In" />
+          <Parameter Name="Area" Type="nvarchar" Mode="In" />
+          <Parameter Name="S_Pit" Type="nvarchar" Mode="In" />
+          <Parameter Name="T_Pit" Type="nvarchar" Mode="In" />
+          <Parameter Name="An" Type="nvarchar" Mode="In" />
+          <Parameter Name="N" Type="nvarchar" Mode="In" />
+          <Parameter Name="Discovery_Date" Type="date" Mode="In" />
+          <Parameter Name="Size_cm" Type="nvarchar" Mode="In" />
+          <Parameter Name="Thickness_mm" Type="nvarchar" Mode="In" />
+          <Parameter Name="Weight_g" Type="nvarchar" Mode="In" />
+          <Parameter Name="Shape" Type="nvarchar" Mode="In" />
+          <Parameter Name="Colour" Type="nvarchar" Mode="In" />
+          <Parameter Name="Texture" Type="nvarchar" Mode="In" />
+          <Parameter Name="Surface" Type="nvarchar" Mode="In" />
+          <Parameter Name="Inclusions" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spInsertResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEM_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gen_Img_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="SEM_Img_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="SEM_Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsBulk" Type="bit" Mode="In" />
+          <Parameter Name="IsResult" Type="bit" Mode="In" />
+          <Parameter Name="Cause_Of_Error" Type="nvarchar" Mode="In" />
+          <Parameter Name="Img_identifier" Type="nvarchar" Mode="In" />
+          <Parameter Name="MgO" Type="float" Mode="In" />
+          <Parameter Name="Al2O3" Type="float" Mode="In" />
+          <Parameter Name="SiO2" Type="float" Mode="In" />
+          <Parameter Name="P2O5" Type="float" Mode="In" />
+          <Parameter Name="SO3" Type="float" Mode="In" />
+          <Parameter Name="K2O" Type="float" Mode="In" />
+          <Parameter Name="CaO" Type="float" Mode="In" />
+          <Parameter Name="TiO2" Type="float" Mode="In" />
+          <Parameter Name="MnO" Type="float" Mode="In" />
+          <Parameter Name="FeO" Type="float" Mode="In" />
+          <Parameter Name="CuO" Type="float" Mode="In" />
+          <Parameter Name="ZnO" Type="float" Mode="In" />
+          <Parameter Name="FeS2" Type="float" Mode="In" />
+          <Parameter Name="Eu2O3" Type="float" Mode="In" />
+          <Parameter Name="MoO3" Type="float" Mode="In" />
+          <Parameter Name="Al" Type="float" Mode="In" />
+          <Parameter Name="Br" Type="float" Mode="In" />
+          <Parameter Name="Mg" Type="float" Mode="In" />
+          <Parameter Name="Si" Type="float" Mode="In" />
+          <Parameter Name="O" Type="float" Mode="In" />
+          <Parameter Name="S" Type="float" Mode="In" />
+          <Parameter Name="Fe" Type="float" Mode="In" />
+          <Parameter Name="Cu" Type="float" Mode="In" />
+          <Parameter Name="Total" Type="float" Mode="In" />
+        </Function>
+        <Function Name="spInsertResultsToSample" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEM_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Sample_ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spInsertSamples" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Sample_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Sample_Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Object_Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Analysed" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spInsertSamplesToObject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Sample_ID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Obj_ID" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="SeponModelStoreContainer">
           <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImagesToSample_Lookup" EntityType="Self.ImagesToSample_Lookup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ImageURL" EntityType="Self.ImageURL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Objects" EntityType="Self.Objects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="References" EntityType="Self.References" Schema="dbo" store:Type="Tables" />
@@ -292,9 +637,55 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <EntitySet Name="SEM_ResultsDim" EntityType="Self.SEM_ResultsDim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vPBI_Results_Report" EntityType="Self.vPBI_Results_Report" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vPBI_Results_Report].[Sample_ID] AS [Sample_ID], 
+[vPBI_Results_Report].[Object_ID] AS [Object_ID], 
+[vPBI_Results_Report].[Sample_Type] AS [Sample_Type], 
+[vPBI_Results_Report].[Sample_No] AS [Sample_No], 
+[vPBI_Results_Report].[Object_Type] AS [Object_Type], 
+[vPBI_Results_Report].[Analysed] AS [Analysed], 
+[vPBI_Results_Report].[SEM_ID] AS [SEM_ID], 
+[vPBI_Results_Report].[Gen_Img_ID] AS [Gen_Img_ID], 
+[vPBI_Results_Report].[SEM_Img_ID] AS [SEM_Img_ID], 
+[vPBI_Results_Report].[SEM_Type] AS [SEM_Type], 
+[vPBI_Results_Report].[IsBulk] AS [IsBulk], 
+[vPBI_Results_Report].[IsResult] AS [IsResult], 
+[vPBI_Results_Report].[Cause_Of_Error] AS [Cause_Of_Error], 
+[vPBI_Results_Report].[Img_identifier] AS [Img_identifier], 
+[vPBI_Results_Report].[MgO] AS [MgO], 
+[vPBI_Results_Report].[Al2O3] AS [Al2O3], 
+[vPBI_Results_Report].[SiO2] AS [SiO2], 
+[vPBI_Results_Report].[P2O5] AS [P2O5], 
+[vPBI_Results_Report].[SO3] AS [SO3], 
+[vPBI_Results_Report].[K2O] AS [K2O], 
+[vPBI_Results_Report].[CaO] AS [CaO], 
+[vPBI_Results_Report].[TiO2] AS [TiO2], 
+[vPBI_Results_Report].[MnO] AS [MnO], 
+[vPBI_Results_Report].[FeO] AS [FeO], 
+[vPBI_Results_Report].[CuO] AS [CuO], 
+[vPBI_Results_Report].[ZnO] AS [ZnO], 
+[vPBI_Results_Report].[FeS2] AS [FeS2], 
+[vPBI_Results_Report].[Eu2O3] AS [Eu2O3], 
+[vPBI_Results_Report].[MoO3] AS [MoO3], 
+[vPBI_Results_Report].[Al] AS [Al], 
+[vPBI_Results_Report].[Br] AS [Br], 
+[vPBI_Results_Report].[Mg] AS [Mg], 
+[vPBI_Results_Report].[Si] AS [Si], 
+[vPBI_Results_Report].[O] AS [O], 
+[vPBI_Results_Report].[S] AS [S], 
+[vPBI_Results_Report].[Fe] AS [Fe], 
+[vPBI_Results_Report].[Cu] AS [Cu], 
+[vPBI_Results_Report].[Total] AS [Total]
+FROM [dbo].[vPBI_Results_Report] AS [vPBI_Results_Report]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="fk_GenImg" Association="Self.fk_GenImg">
             <End Role="Images" EntitySet="Images" />
             <End Role="SEM_Results" EntitySet="SEM_Results" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ImagesSampleID" Association="Self.fk_ImagesSampleID">
+            <End Role="Samples_New" EntitySet="Samples_New" />
+            <End Role="ImagesToSample_Lookup" EntitySet="ImagesToSample_Lookup" />
           </AssociationSet>
           <AssociationSet Name="fk_ResultsSampleID" Association="Self.fk_ResultsSampleID">
             <End Role="Samples_New" EntitySet="Samples_New" />
@@ -326,7 +717,119 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
     <edmx:ConceptualModels>
       <Schema Namespace="SeponModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="SeponEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="pCreatevCrucibleBulkResultsPivot" />
+          <FunctionImport Name="pCreatevCrucibleSlagBulkResultsPivot" />
+          <FunctionImport Name="pCreatevCuIngotBulkResultsPivot" />
+          <FunctionImport Name="pCreatevMineralBulkResultsPivot" />
+          <FunctionImport Name="pCreatevPotteryBulkResultsPivot" />
+          <FunctionImport Name="pCreatevSlagBulkResultsPivot" />
+          <FunctionImport Name="pETLImages" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SeponModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SeponModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="spInsertImages">
+            <Parameter Name="Img_ID" Mode="In" Type="String" />
+            <Parameter Name="Img_Type" Mode="In" Type="String" />
+            <Parameter Name="No_Of_Analyses" Mode="In" Type="Int32" />
+            <Parameter Name="Img_Description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertObjects">
+            <Parameter Name="Object_ID" Mode="In" Type="String" />
+            <Parameter Name="Object_Type" Mode="In" Type="String" />
+            <Parameter Name="Object_Description_Short" Mode="In" Type="String" />
+            <Parameter Name="Photo" Mode="In" Type="Boolean" />
+            <Parameter Name="Area" Mode="In" Type="String" />
+            <Parameter Name="S_Pit" Mode="In" Type="String" />
+            <Parameter Name="T_Pit" Mode="In" Type="String" />
+            <Parameter Name="An" Mode="In" Type="String" />
+            <Parameter Name="N" Mode="In" Type="String" />
+            <Parameter Name="Discovery_Date" Mode="In" Type="DateTime" />
+            <Parameter Name="Size_cm" Mode="In" Type="String" />
+            <Parameter Name="Thickness_mm" Mode="In" Type="String" />
+            <Parameter Name="Weight_g" Mode="In" Type="String" />
+            <Parameter Name="Shape" Mode="In" Type="String" />
+            <Parameter Name="Colour" Mode="In" Type="String" />
+            <Parameter Name="Texture" Mode="In" Type="String" />
+            <Parameter Name="Surface" Mode="In" Type="String" />
+            <Parameter Name="Inclusions" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertResults">
+            <Parameter Name="SEM_ID" Mode="In" Type="String" />
+            <Parameter Name="Gen_Img_ID" Mode="In" Type="String" />
+            <Parameter Name="SEM_Img_ID" Mode="In" Type="String" />
+            <Parameter Name="SEM_Type" Mode="In" Type="String" />
+            <Parameter Name="IsBulk" Mode="In" Type="Boolean" />
+            <Parameter Name="IsResult" Mode="In" Type="Boolean" />
+            <Parameter Name="Cause_Of_Error" Mode="In" Type="String" />
+            <Parameter Name="Img_identifier" Mode="In" Type="String" />
+            <Parameter Name="MgO" Mode="In" Type="Double" />
+            <Parameter Name="Al2O3" Mode="In" Type="Double" />
+            <Parameter Name="SiO2" Mode="In" Type="Double" />
+            <Parameter Name="P2O5" Mode="In" Type="Double" />
+            <Parameter Name="SO3" Mode="In" Type="Double" />
+            <Parameter Name="K2O" Mode="In" Type="Double" />
+            <Parameter Name="CaO" Mode="In" Type="Double" />
+            <Parameter Name="TiO2" Mode="In" Type="Double" />
+            <Parameter Name="MnO" Mode="In" Type="Double" />
+            <Parameter Name="FeO" Mode="In" Type="Double" />
+            <Parameter Name="CuO" Mode="In" Type="Double" />
+            <Parameter Name="ZnO" Mode="In" Type="Double" />
+            <Parameter Name="FeS2" Mode="In" Type="Double" />
+            <Parameter Name="Eu2O3" Mode="In" Type="Double" />
+            <Parameter Name="MoO3" Mode="In" Type="Double" />
+            <Parameter Name="Al" Mode="In" Type="Double" />
+            <Parameter Name="Br" Mode="In" Type="Double" />
+            <Parameter Name="Mg" Mode="In" Type="Double" />
+            <Parameter Name="Si" Mode="In" Type="Double" />
+            <Parameter Name="O" Mode="In" Type="Double" />
+            <Parameter Name="S" Mode="In" Type="Double" />
+            <Parameter Name="Fe" Mode="In" Type="Double" />
+            <Parameter Name="Cu" Mode="In" Type="Double" />
+            <Parameter Name="Total" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertResultsToSample">
+            <Parameter Name="SEM_ID" Mode="In" Type="String" />
+            <Parameter Name="Sample_ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertSamples">
+            <Parameter Name="Sample_ID" Mode="In" Type="String" />
+            <Parameter Name="Sample_Type" Mode="In" Type="String" />
+            <Parameter Name="Object_Type" Mode="In" Type="String" />
+            <Parameter Name="Analysed" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="spInsertSamplesToObject">
+            <Parameter Name="Sample_ID" Mode="In" Type="String" />
+            <Parameter Name="Obj_ID" Mode="In" Type="String" />
+          </FunctionImport>
           <EntitySet Name="Images" EntityType="SeponModel.Image" />
+          <EntitySet Name="ImagesToSample_Lookup" EntityType="SeponModel.ImagesToSample_Lookup" />
           <EntitySet Name="ImageURLs" EntityType="SeponModel.ImageURL" />
           <EntitySet Name="Objects" EntityType="SeponModel.Object" />
           <EntitySet Name="References" EntityType="SeponModel.Reference" />
@@ -337,6 +840,7 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <EntitySet Name="SEM_ResultsDim" EntityType="SeponModel.SEM_ResultsDim" />
           <EntitySet Name="sysdiagrams" EntityType="SeponModel.sysdiagram" />
           <EntitySet Name="Users" EntityType="SeponModel.User" />
+          <EntitySet Name="vPBI_Results_Report" EntityType="SeponModel.vPBI_Results_Report" />
           <AssociationSet Name="fk_GenImg" Association="SeponModel.fk_GenImg">
             <End Role="Image" EntitySet="Images" />
             <End Role="SEM_Results" EntitySet="SEM_Results" />
@@ -348,6 +852,10 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <AssociationSet Name="fk_URLImgID" Association="SeponModel.fk_URLImgID">
             <End Role="Image" EntitySet="Images" />
             <End Role="ImageURL" EntitySet="ImageURLs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ImagesSampleID" Association="SeponModel.fk_ImagesSampleID">
+            <End Role="Samples_New" EntitySet="Samples_New" />
+            <End Role="ImagesToSample_Lookup" EntitySet="ImagesToSample_Lookup" />
           </AssociationSet>
           <AssociationSet Name="fk_ResultsSampleID" Association="SeponModel.fk_ResultsSampleID">
             <End Role="Samples_New" EntitySet="Samples_New" />
@@ -362,6 +870,17 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
             <End Role="Object" EntitySet="Objects" />
           </AssociationSet>
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
         <EntityType Name="Image">
           <Key>
             <PropertyRef Name="Img_ID" />
@@ -373,6 +892,14 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <NavigationProperty Name="SEM_Results" Relationship="SeponModel.fk_GenImg" FromRole="Image" ToRole="SEM_Results" />
           <NavigationProperty Name="SEM_Results1" Relationship="SeponModel.fk_SEMImg" FromRole="Image" ToRole="SEM_Results" />
           <NavigationProperty Name="ImageURL" Relationship="SeponModel.fk_URLImgID" FromRole="Image" ToRole="ImageURL" />
+        </EntityType>
+        <EntityType Name="ImagesToSample_Lookup">
+          <Key>
+            <PropertyRef Name="Img_ID" />
+          </Key>
+          <Property Name="Img_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Samples_New" Relationship="SeponModel.fk_ImagesSampleID" FromRole="ImagesToSample_Lookup" ToRole="Samples_New" />
         </EntityType>
         <EntityType Name="ImageURL">
           <Key>
@@ -441,6 +968,7 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <Property Name="Sample_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Object_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Analysed" Type="Boolean" />
+          <NavigationProperty Name="ImagesToSample_Lookup" Relationship="SeponModel.fk_ImagesSampleID" FromRole="Samples_New" ToRole="ImagesToSample_Lookup" />
           <NavigationProperty Name="ResultsToSample_Lookup" Relationship="SeponModel.fk_ResultsSampleID" FromRole="Samples_New" ToRole="ResultsToSample_Lookup" />
           <NavigationProperty Name="Objects" Relationship="SeponModel.SamplesToObject_Lookup" FromRole="Samples_New" ToRole="Object" />
         </EntityType>
@@ -549,6 +1077,50 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
           <Property Name="Pwd" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="userRole" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="vPBI_Results_Report">
+          <Key>
+            <PropertyRef Name="Sample_ID" />
+            <PropertyRef Name="SEM_ID" />
+          </Key>
+          <Property Name="Sample_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Object_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sample_No" Type="Int32" />
+          <Property Name="Object_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Analysed" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEM_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gen_Img_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEM_Img_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SEM_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsBulk" Type="Boolean" />
+          <Property Name="IsResult" Type="Boolean" />
+          <Property Name="Cause_Of_Error" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Img_identifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MgO" Type="Double" />
+          <Property Name="Al2O3" Type="Double" />
+          <Property Name="SiO2" Type="Double" />
+          <Property Name="P2O5" Type="Double" />
+          <Property Name="SO3" Type="Double" />
+          <Property Name="K2O" Type="Double" />
+          <Property Name="CaO" Type="Double" />
+          <Property Name="TiO2" Type="Double" />
+          <Property Name="MnO" Type="Double" />
+          <Property Name="FeO" Type="Double" />
+          <Property Name="CuO" Type="Double" />
+          <Property Name="ZnO" Type="Double" />
+          <Property Name="FeS2" Type="Double" />
+          <Property Name="Eu2O3" Type="Double" />
+          <Property Name="MoO3" Type="Double" />
+          <Property Name="Al" Type="Double" />
+          <Property Name="Br" Type="Double" />
+          <Property Name="Mg" Type="Double" />
+          <Property Name="Si" Type="Double" />
+          <Property Name="O" Type="Double" />
+          <Property Name="S" Type="Double" />
+          <Property Name="Fe" Type="Double" />
+          <Property Name="Cu" Type="Double" />
+          <Property Name="Total" Type="Double" />
+        </EntityType>
         <Association Name="fk_GenImg">
           <End Type="SeponModel.Image" Role="Image" Multiplicity="0..1" />
           <End Type="SeponModel.SEM_Results" Role="SEM_Results" Multiplicity="*" />
@@ -582,6 +1154,18 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
             </Principal>
             <Dependent Role="ImageURL">
               <PropertyRef Name="Img_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ImagesSampleID">
+          <End Type="SeponModel.Samples_New" Role="Samples_New" Multiplicity="0..1" />
+          <End Type="SeponModel.ImagesToSample_Lookup" Role="ImagesToSample_Lookup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Samples_New">
+              <PropertyRef Name="Sample_ID" />
+            </Principal>
+            <Dependent Role="ImagesToSample_Lookup">
+              <PropertyRef Name="Sample_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -619,12 +1203,57 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SeponModelStoreContainer" CdmEntityContainer="SeponEntities">
+          <FunctionImportMapping FunctionImportName="pCreatevCrucibleBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevCrucibleBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pCreatevCrucibleSlagBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevCrucibleSlagBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pCreatevCuIngotBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevCuIngotBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pCreatevMineralBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevMineralBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pCreatevPotteryBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevPotteryBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pCreatevSlagBulkResultsPivot" FunctionName="SeponModel.Store.pCreatevSlagBulkResultsPivot" />
+          <FunctionImportMapping FunctionImportName="pETLImages" FunctionName="SeponModel.Store.pETLImages" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SeponModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SeponModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SeponModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SeponModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SeponModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SeponModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SeponModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SeponModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SeponModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="spInsertImages" FunctionName="SeponModel.Store.spInsertImages" />
+          <FunctionImportMapping FunctionImportName="spInsertObjects" FunctionName="SeponModel.Store.spInsertObjects" />
+          <FunctionImportMapping FunctionImportName="spInsertResults" FunctionName="SeponModel.Store.spInsertResults" />
+          <FunctionImportMapping FunctionImportName="spInsertResultsToSample" FunctionName="SeponModel.Store.spInsertResultsToSample" />
+          <FunctionImportMapping FunctionImportName="spInsertSamples" FunctionName="SeponModel.Store.spInsertSamples" />
+          <FunctionImportMapping FunctionImportName="spInsertSamplesToObject" FunctionName="SeponModel.Store.spInsertSamplesToObject" />
           <EntitySetMapping Name="Images">
             <EntityTypeMapping TypeName="SeponModel.Image">
               <MappingFragment StoreEntitySet="Images">
                 <ScalarProperty Name="Img_Description" ColumnName="Img_Description" />
                 <ScalarProperty Name="No_Of_Analyses" ColumnName="No_Of_Analyses" />
                 <ScalarProperty Name="Img_Type" ColumnName="Img_Type" />
+                <ScalarProperty Name="Img_ID" ColumnName="Img_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImagesToSample_Lookup">
+            <EntityTypeMapping TypeName="SeponModel.ImagesToSample_Lookup">
+              <MappingFragment StoreEntitySet="ImagesToSample_Lookup">
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
                 <ScalarProperty Name="Img_ID" ColumnName="Img_ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -805,6 +1434,50 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="vPBI_Results_Report">
+            <EntityTypeMapping TypeName="SeponModel.vPBI_Results_Report">
+              <MappingFragment StoreEntitySet="vPBI_Results_Report">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Cu" ColumnName="Cu" />
+                <ScalarProperty Name="Fe" ColumnName="Fe" />
+                <ScalarProperty Name="S" ColumnName="S" />
+                <ScalarProperty Name="O" ColumnName="O" />
+                <ScalarProperty Name="Si" ColumnName="Si" />
+                <ScalarProperty Name="Mg" ColumnName="Mg" />
+                <ScalarProperty Name="Br" ColumnName="Br" />
+                <ScalarProperty Name="Al" ColumnName="Al" />
+                <ScalarProperty Name="MoO3" ColumnName="MoO3" />
+                <ScalarProperty Name="Eu2O3" ColumnName="Eu2O3" />
+                <ScalarProperty Name="FeS2" ColumnName="FeS2" />
+                <ScalarProperty Name="ZnO" ColumnName="ZnO" />
+                <ScalarProperty Name="CuO" ColumnName="CuO" />
+                <ScalarProperty Name="FeO" ColumnName="FeO" />
+                <ScalarProperty Name="MnO" ColumnName="MnO" />
+                <ScalarProperty Name="TiO2" ColumnName="TiO2" />
+                <ScalarProperty Name="CaO" ColumnName="CaO" />
+                <ScalarProperty Name="K2O" ColumnName="K2O" />
+                <ScalarProperty Name="SO3" ColumnName="SO3" />
+                <ScalarProperty Name="P2O5" ColumnName="P2O5" />
+                <ScalarProperty Name="SiO2" ColumnName="SiO2" />
+                <ScalarProperty Name="Al2O3" ColumnName="Al2O3" />
+                <ScalarProperty Name="MgO" ColumnName="MgO" />
+                <ScalarProperty Name="Img_identifier" ColumnName="Img_identifier" />
+                <ScalarProperty Name="Cause_Of_Error" ColumnName="Cause_Of_Error" />
+                <ScalarProperty Name="IsResult" ColumnName="IsResult" />
+                <ScalarProperty Name="IsBulk" ColumnName="IsBulk" />
+                <ScalarProperty Name="SEM_Type" ColumnName="SEM_Type" />
+                <ScalarProperty Name="SEM_Img_ID" ColumnName="SEM_Img_ID" />
+                <ScalarProperty Name="Gen_Img_ID" ColumnName="Gen_Img_ID" />
+                <ScalarProperty Name="SEM_ID" ColumnName="SEM_ID" />
+                <ScalarProperty Name="Analysed" ColumnName="Analysed" />
+                <ScalarProperty Name="Object_Type" ColumnName="Object_Type" />
+                <ScalarProperty Name="Sample_No" ColumnName="Sample_No" />
+                <ScalarProperty Name="Sample_Type" ColumnName="Sample_Type" />
+                <ScalarProperty Name="Object_ID" ColumnName="Object_ID" />
+                <ScalarProperty Name="Sample_ID" ColumnName="Sample_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <AssociationSetMapping Name="SamplesToObject_Lookup" TypeName="SeponModel.SamplesToObject_Lookup" StoreEntitySet="SamplesToObject_Lookup">
             <EndProperty Name="Object">
               <ScalarProperty Name="Obj_ID" ColumnName="Obj_ID" />
@@ -828,7 +1501,7 @@ warning 6013: The table/view 'Sepon.dbo.SEM_ResultsDataPoints' does not have a p
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

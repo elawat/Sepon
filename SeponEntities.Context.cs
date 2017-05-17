@@ -12,6 +12,9 @@ namespace Sepon
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class SeponEntities : DbContext
     {
@@ -26,6 +29,7 @@ namespace Sepon
         }
     
         public DbSet<Image> Images { get; set; }
+        public DbSet<ImagesToSample_Lookup> ImagesToSample_Lookup { get; set; }
         public DbSet<ImageURL> ImageURLs { get; set; }
         public DbSet<Object> Objects { get; set; }
         public DbSet<Reference> References { get; set; }
@@ -36,5 +40,422 @@ namespace Sepon
         public DbSet<SEM_ResultsDim> SEM_ResultsDim { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<vPBI_Results_Report> vPBI_Results_Report { get; set; }
+    
+        public virtual int pCreatevCrucibleBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevCrucibleBulkResultsPivot");
+        }
+    
+        public virtual int pCreatevCrucibleSlagBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevCrucibleSlagBulkResultsPivot");
+        }
+    
+        public virtual int pCreatevCuIngotBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevCuIngotBulkResultsPivot");
+        }
+    
+        public virtual int pCreatevMineralBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevMineralBulkResultsPivot");
+        }
+    
+        public virtual int pCreatevPotteryBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevPotteryBulkResultsPivot");
+        }
+    
+        public virtual int pCreatevSlagBulkResultsPivot()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pCreatevSlagBulkResultsPivot");
+        }
+    
+        public virtual int pETLImages()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pETLImages");
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual int spInsertImages(string img_ID, string img_Type, Nullable<int> no_Of_Analyses, string img_Description)
+        {
+            var img_IDParameter = img_ID != null ?
+                new ObjectParameter("Img_ID", img_ID) :
+                new ObjectParameter("Img_ID", typeof(string));
+    
+            var img_TypeParameter = img_Type != null ?
+                new ObjectParameter("Img_Type", img_Type) :
+                new ObjectParameter("Img_Type", typeof(string));
+    
+            var no_Of_AnalysesParameter = no_Of_Analyses.HasValue ?
+                new ObjectParameter("No_Of_Analyses", no_Of_Analyses) :
+                new ObjectParameter("No_Of_Analyses", typeof(int));
+    
+            var img_DescriptionParameter = img_Description != null ?
+                new ObjectParameter("Img_Description", img_Description) :
+                new ObjectParameter("Img_Description", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertImages", img_IDParameter, img_TypeParameter, no_Of_AnalysesParameter, img_DescriptionParameter);
+        }
+    
+        public virtual int spInsertObjects(string object_ID, string object_Type, string object_Description_Short, Nullable<bool> photo, string area, string s_Pit, string t_Pit, string an, string n, Nullable<System.DateTime> discovery_Date, string size_cm, string thickness_mm, string weight_g, string shape, string colour, string texture, string surface, string inclusions)
+        {
+            var object_IDParameter = object_ID != null ?
+                new ObjectParameter("Object_ID", object_ID) :
+                new ObjectParameter("Object_ID", typeof(string));
+    
+            var object_TypeParameter = object_Type != null ?
+                new ObjectParameter("Object_Type", object_Type) :
+                new ObjectParameter("Object_Type", typeof(string));
+    
+            var object_Description_ShortParameter = object_Description_Short != null ?
+                new ObjectParameter("Object_Description_Short", object_Description_Short) :
+                new ObjectParameter("Object_Description_Short", typeof(string));
+    
+            var photoParameter = photo.HasValue ?
+                new ObjectParameter("Photo", photo) :
+                new ObjectParameter("Photo", typeof(bool));
+    
+            var areaParameter = area != null ?
+                new ObjectParameter("Area", area) :
+                new ObjectParameter("Area", typeof(string));
+    
+            var s_PitParameter = s_Pit != null ?
+                new ObjectParameter("S_Pit", s_Pit) :
+                new ObjectParameter("S_Pit", typeof(string));
+    
+            var t_PitParameter = t_Pit != null ?
+                new ObjectParameter("T_Pit", t_Pit) :
+                new ObjectParameter("T_Pit", typeof(string));
+    
+            var anParameter = an != null ?
+                new ObjectParameter("An", an) :
+                new ObjectParameter("An", typeof(string));
+    
+            var nParameter = n != null ?
+                new ObjectParameter("N", n) :
+                new ObjectParameter("N", typeof(string));
+    
+            var discovery_DateParameter = discovery_Date.HasValue ?
+                new ObjectParameter("Discovery_Date", discovery_Date) :
+                new ObjectParameter("Discovery_Date", typeof(System.DateTime));
+    
+            var size_cmParameter = size_cm != null ?
+                new ObjectParameter("Size_cm", size_cm) :
+                new ObjectParameter("Size_cm", typeof(string));
+    
+            var thickness_mmParameter = thickness_mm != null ?
+                new ObjectParameter("Thickness_mm", thickness_mm) :
+                new ObjectParameter("Thickness_mm", typeof(string));
+    
+            var weight_gParameter = weight_g != null ?
+                new ObjectParameter("Weight_g", weight_g) :
+                new ObjectParameter("Weight_g", typeof(string));
+    
+            var shapeParameter = shape != null ?
+                new ObjectParameter("Shape", shape) :
+                new ObjectParameter("Shape", typeof(string));
+    
+            var colourParameter = colour != null ?
+                new ObjectParameter("Colour", colour) :
+                new ObjectParameter("Colour", typeof(string));
+    
+            var textureParameter = texture != null ?
+                new ObjectParameter("Texture", texture) :
+                new ObjectParameter("Texture", typeof(string));
+    
+            var surfaceParameter = surface != null ?
+                new ObjectParameter("Surface", surface) :
+                new ObjectParameter("Surface", typeof(string));
+    
+            var inclusionsParameter = inclusions != null ?
+                new ObjectParameter("Inclusions", inclusions) :
+                new ObjectParameter("Inclusions", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertObjects", object_IDParameter, object_TypeParameter, object_Description_ShortParameter, photoParameter, areaParameter, s_PitParameter, t_PitParameter, anParameter, nParameter, discovery_DateParameter, size_cmParameter, thickness_mmParameter, weight_gParameter, shapeParameter, colourParameter, textureParameter, surfaceParameter, inclusionsParameter);
+        }
+    
+        public virtual int spInsertResults(string sEM_ID, string gen_Img_ID, string sEM_Img_ID, string sEM_Type, Nullable<bool> isBulk, Nullable<bool> isResult, string cause_Of_Error, string img_identifier, Nullable<double> mgO, Nullable<double> al2O3, Nullable<double> siO2, Nullable<double> p2O5, Nullable<double> sO3, Nullable<double> k2O, Nullable<double> caO, Nullable<double> tiO2, Nullable<double> mnO, Nullable<double> feO, Nullable<double> cuO, Nullable<double> znO, Nullable<double> feS2, Nullable<double> eu2O3, Nullable<double> moO3, Nullable<double> al, Nullable<double> br, Nullable<double> mg, Nullable<double> si, Nullable<double> o, Nullable<double> s, Nullable<double> fe, Nullable<double> cu, Nullable<double> total)
+        {
+            var sEM_IDParameter = sEM_ID != null ?
+                new ObjectParameter("SEM_ID", sEM_ID) :
+                new ObjectParameter("SEM_ID", typeof(string));
+    
+            var gen_Img_IDParameter = gen_Img_ID != null ?
+                new ObjectParameter("Gen_Img_ID", gen_Img_ID) :
+                new ObjectParameter("Gen_Img_ID", typeof(string));
+    
+            var sEM_Img_IDParameter = sEM_Img_ID != null ?
+                new ObjectParameter("SEM_Img_ID", sEM_Img_ID) :
+                new ObjectParameter("SEM_Img_ID", typeof(string));
+    
+            var sEM_TypeParameter = sEM_Type != null ?
+                new ObjectParameter("SEM_Type", sEM_Type) :
+                new ObjectParameter("SEM_Type", typeof(string));
+    
+            var isBulkParameter = isBulk.HasValue ?
+                new ObjectParameter("IsBulk", isBulk) :
+                new ObjectParameter("IsBulk", typeof(bool));
+    
+            var isResultParameter = isResult.HasValue ?
+                new ObjectParameter("IsResult", isResult) :
+                new ObjectParameter("IsResult", typeof(bool));
+    
+            var cause_Of_ErrorParameter = cause_Of_Error != null ?
+                new ObjectParameter("Cause_Of_Error", cause_Of_Error) :
+                new ObjectParameter("Cause_Of_Error", typeof(string));
+    
+            var img_identifierParameter = img_identifier != null ?
+                new ObjectParameter("Img_identifier", img_identifier) :
+                new ObjectParameter("Img_identifier", typeof(string));
+    
+            var mgOParameter = mgO.HasValue ?
+                new ObjectParameter("MgO", mgO) :
+                new ObjectParameter("MgO", typeof(double));
+    
+            var al2O3Parameter = al2O3.HasValue ?
+                new ObjectParameter("Al2O3", al2O3) :
+                new ObjectParameter("Al2O3", typeof(double));
+    
+            var siO2Parameter = siO2.HasValue ?
+                new ObjectParameter("SiO2", siO2) :
+                new ObjectParameter("SiO2", typeof(double));
+    
+            var p2O5Parameter = p2O5.HasValue ?
+                new ObjectParameter("P2O5", p2O5) :
+                new ObjectParameter("P2O5", typeof(double));
+    
+            var sO3Parameter = sO3.HasValue ?
+                new ObjectParameter("SO3", sO3) :
+                new ObjectParameter("SO3", typeof(double));
+    
+            var k2OParameter = k2O.HasValue ?
+                new ObjectParameter("K2O", k2O) :
+                new ObjectParameter("K2O", typeof(double));
+    
+            var caOParameter = caO.HasValue ?
+                new ObjectParameter("CaO", caO) :
+                new ObjectParameter("CaO", typeof(double));
+    
+            var tiO2Parameter = tiO2.HasValue ?
+                new ObjectParameter("TiO2", tiO2) :
+                new ObjectParameter("TiO2", typeof(double));
+    
+            var mnOParameter = mnO.HasValue ?
+                new ObjectParameter("MnO", mnO) :
+                new ObjectParameter("MnO", typeof(double));
+    
+            var feOParameter = feO.HasValue ?
+                new ObjectParameter("FeO", feO) :
+                new ObjectParameter("FeO", typeof(double));
+    
+            var cuOParameter = cuO.HasValue ?
+                new ObjectParameter("CuO", cuO) :
+                new ObjectParameter("CuO", typeof(double));
+    
+            var znOParameter = znO.HasValue ?
+                new ObjectParameter("ZnO", znO) :
+                new ObjectParameter("ZnO", typeof(double));
+    
+            var feS2Parameter = feS2.HasValue ?
+                new ObjectParameter("FeS2", feS2) :
+                new ObjectParameter("FeS2", typeof(double));
+    
+            var eu2O3Parameter = eu2O3.HasValue ?
+                new ObjectParameter("Eu2O3", eu2O3) :
+                new ObjectParameter("Eu2O3", typeof(double));
+    
+            var moO3Parameter = moO3.HasValue ?
+                new ObjectParameter("MoO3", moO3) :
+                new ObjectParameter("MoO3", typeof(double));
+    
+            var alParameter = al.HasValue ?
+                new ObjectParameter("Al", al) :
+                new ObjectParameter("Al", typeof(double));
+    
+            var brParameter = br.HasValue ?
+                new ObjectParameter("Br", br) :
+                new ObjectParameter("Br", typeof(double));
+    
+            var mgParameter = mg.HasValue ?
+                new ObjectParameter("Mg", mg) :
+                new ObjectParameter("Mg", typeof(double));
+    
+            var siParameter = si.HasValue ?
+                new ObjectParameter("Si", si) :
+                new ObjectParameter("Si", typeof(double));
+    
+            var oParameter = o.HasValue ?
+                new ObjectParameter("O", o) :
+                new ObjectParameter("O", typeof(double));
+    
+            var sParameter = s.HasValue ?
+                new ObjectParameter("S", s) :
+                new ObjectParameter("S", typeof(double));
+    
+            var feParameter = fe.HasValue ?
+                new ObjectParameter("Fe", fe) :
+                new ObjectParameter("Fe", typeof(double));
+    
+            var cuParameter = cu.HasValue ?
+                new ObjectParameter("Cu", cu) :
+                new ObjectParameter("Cu", typeof(double));
+    
+            var totalParameter = total.HasValue ?
+                new ObjectParameter("Total", total) :
+                new ObjectParameter("Total", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertResults", sEM_IDParameter, gen_Img_IDParameter, sEM_Img_IDParameter, sEM_TypeParameter, isBulkParameter, isResultParameter, cause_Of_ErrorParameter, img_identifierParameter, mgOParameter, al2O3Parameter, siO2Parameter, p2O5Parameter, sO3Parameter, k2OParameter, caOParameter, tiO2Parameter, mnOParameter, feOParameter, cuOParameter, znOParameter, feS2Parameter, eu2O3Parameter, moO3Parameter, alParameter, brParameter, mgParameter, siParameter, oParameter, sParameter, feParameter, cuParameter, totalParameter);
+        }
+    
+        public virtual int spInsertResultsToSample(string sEM_ID, string sample_ID)
+        {
+            var sEM_IDParameter = sEM_ID != null ?
+                new ObjectParameter("SEM_ID", sEM_ID) :
+                new ObjectParameter("SEM_ID", typeof(string));
+    
+            var sample_IDParameter = sample_ID != null ?
+                new ObjectParameter("Sample_ID", sample_ID) :
+                new ObjectParameter("Sample_ID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertResultsToSample", sEM_IDParameter, sample_IDParameter);
+        }
+    
+        public virtual int spInsertSamples(string sample_ID, string sample_Type, string object_Type, Nullable<bool> analysed)
+        {
+            var sample_IDParameter = sample_ID != null ?
+                new ObjectParameter("Sample_ID", sample_ID) :
+                new ObjectParameter("Sample_ID", typeof(string));
+    
+            var sample_TypeParameter = sample_Type != null ?
+                new ObjectParameter("Sample_Type", sample_Type) :
+                new ObjectParameter("Sample_Type", typeof(string));
+    
+            var object_TypeParameter = object_Type != null ?
+                new ObjectParameter("Object_Type", object_Type) :
+                new ObjectParameter("Object_Type", typeof(string));
+    
+            var analysedParameter = analysed.HasValue ?
+                new ObjectParameter("Analysed", analysed) :
+                new ObjectParameter("Analysed", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertSamples", sample_IDParameter, sample_TypeParameter, object_TypeParameter, analysedParameter);
+        }
+    
+        public virtual int spInsertSamplesToObject(string sample_ID, string obj_ID)
+        {
+            var sample_IDParameter = sample_ID != null ?
+                new ObjectParameter("Sample_ID", sample_ID) :
+                new ObjectParameter("Sample_ID", typeof(string));
+    
+            var obj_IDParameter = obj_ID != null ?
+                new ObjectParameter("Obj_ID", obj_ID) :
+                new ObjectParameter("Obj_ID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spInsertSamplesToObject", sample_IDParameter, obj_IDParameter);
+        }
     }
 }

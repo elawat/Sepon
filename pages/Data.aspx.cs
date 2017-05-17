@@ -16,9 +16,8 @@ namespace Sepon.pages
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        
-
             if (!IsPostBack)
+                // On page load code
             {
                 btnShowFilter.Visible = false;
                 //DropDownListObjType
@@ -41,7 +40,9 @@ namespace Sepon.pages
 
         }
 
+        // code of filtering
         protected void DropDownListObjType_SelectedIndexChanged(object sender, EventArgs e)
+            // Code when object type selected
         {
             string sqlobjtype = "";
             string sqlobjID ="";
@@ -91,6 +92,7 @@ namespace Sepon.pages
 
         }
         protected void DropDownListObjID_SelectedIndexChanged(object sender, EventArgs e)
+        // Code when object id selected
         {
             string sqlobjtype = "";
             string sqlobjID = "";
@@ -132,6 +134,7 @@ namespace Sepon.pages
             BindDropDownList(DropDownListSplID, query, "Sample_ID", "Sample_ID", "Select ID");
         }
         protected void DropDownListSplType_SelectedIndexChanged(object sender, EventArgs e)
+        // Code when sample type selected
         {
             string sqlobjtype = "";
             string sqlobjID = "";
@@ -168,6 +171,7 @@ namespace Sepon.pages
         }
 
         protected void CheckBoxAnalysed_CheckedChanged(object sender, EventArgs e)
+        // Code when analysed check bo ticked
         {
             string sqlobjtype = "";
             string sqlobjID = "";
@@ -202,19 +206,49 @@ namespace Sepon.pages
             BindDropDownList(DropDownListSplID, query, "Sample_ID", "Sample_ID", "Select ID");
         }
 
+        // code on clicking object button
         protected void btnObjectsFormObj_Click(object sender, EventArgs e)
         {
             ObjectsForm.Visible = false;
             btnShowFilter.Visible = true;
-
+            divInstr.Visible = false;
 
             {
+
                 string selObject;
+                string spName;
+                string tblName;
                 selObject = DropDownListObjID.SelectedItem.Value;
                 
                 using (SeponEntities dbSepon = new SeponEntities())
                 {
-                    var urls = from url in dbSepon.ImageURLs
+                    string objtype = DropDownListObjType.SelectedItem.Value;
+                    tblName = "Result of " + objtype + " bulk analyses";
+                    if (objtype != "Select Object Type")
+                    {
+                        string objID = DropDownListObjID.SelectedItem.Value;
+                        if (objID == "Select ID")
+                        {
+                            
+                            if (objtype != "furnace fragment")
+                            {
+                                objtype = objtype.Replace(" ", string.Empty);
+                                spName = "pCreatev" + objtype + "BulkResultsPivot";
+                                ExecuteSP(spName);
+                                // only object type selected
+                                GetData("select * from v" + objtype + "BulkResultsPivot", GridViewSEMResults);
+                                lbltblName.Text = tblName;
+                            }
+                            else{
+                                lbltblName.Text = "No SEM results for furnance fragments";
+                                GridViewSEMResults.DataSource = null;
+                                GridViewSEMResults.DataBind();
+                            }
+                            }
+                    }
+
+                        // binding images urls to ImageGallery datalist control
+                        var urls = from url in dbSepon.ImageURLs
                                              join img in dbSepon.Images on url.Img_ID equals img.Img_ID
                                          where url.Img_ID.Contains(selObject) && img.Img_Type == "general"
                                          //where author.Author.Contains(inputAuthor)

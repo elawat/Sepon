@@ -13,15 +13,6 @@ namespace Sepon.pages {
     public partial class Data {
         
         /// <summary>
-        /// btnShowFilter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnShowFilter;
-        
-        /// <summary>
         /// ObjectsForm control.
         /// </summary>
         /// <remarks>
@@ -112,6 +103,33 @@ namespace Sepon.pages {
         protected global::System.Web.UI.WebControls.Button btnObjectsFormSpl;
         
         /// <summary>
+        /// divtblName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divtblName;
+        
+        /// <summary>
+        /// lbltblName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltblName;
+        
+        /// <summary>
+        /// GridViewSEMResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewSEMResults;
+        
+        /// <summary>
         /// ImageGallery control.
         /// </summary>
         /// <remarks>
@@ -119,5 +137,23 @@ namespace Sepon.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList ImageGallery;
+        
+        /// <summary>
+        /// btnShowFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnShowFilter;
+        
+        /// <summary>
+        /// divInstr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInstr;
     }
 }
