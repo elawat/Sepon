@@ -58,6 +58,13 @@
         </tr>
         </table>
 
+
+
+<asp:GridView class="dataelements" ID="GridViewListOfObjSmpl" runat="server" Width="100%"
+             CellPadding="0" >
+    <AlternatingRowStyle BackColor="#e6e6e6" /> 
+</asp:GridView>
+
 <div class="dataelements" id="divtblName" runat="server">
     <asp:Label ID="lbltblName" runat="server" ></asp:Label>
 </div>

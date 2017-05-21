@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Objects.SqlClient;
 
 
 
@@ -209,9 +210,6 @@ namespace Sepon.pages
         // code on clicking object button
         protected void btnObjectsFormObj_Click(object sender, EventArgs e)
         {
-            ObjectsForm.Visible = false;
-            btnShowFilter.Visible = true;
-            divInstr.Visible = false;
 
             {
 
@@ -226,10 +224,32 @@ namespace Sepon.pages
                     tblName = "Result of " + objtype + " bulk analyses";
                     if (objtype != "Select Object Type")
                     {
+                        ObjectsForm.Visible = false;
+                        btnShowFilter.Visible = true;
+                        divInstr.Visible = false;
+
                         string objID = DropDownListObjID.SelectedItem.Value;
                         if (objID == "Select ID")
                         {
+
                             
+                            {
+                                var selobject = from eobject in dbSepon.Objects
+                                                     where eobject.Object_Type == objtype
+                                select new {ID = eobject.Obj_ID,Type = eobject.Object_Type,Description=eobject.Object_Description_Short,Discovered = eobject.Discovery_Date, eobject.Texture, eobject.Surface, eobject.Inclusions }; //anonymous type for multiple column selection
+                               if (selobject.Any())
+                                {
+                                    
+                                    GridViewListOfObjSmpl.DataSource = selobject.ToList(); 
+                                    GridViewListOfObjSmpl.DataBind();
+                                }
+                                else
+                                {
+
+                                }
+                            }
+
+
                             if (objtype != "furnace fragment")
                             {
                                 objtype = objtype.Replace(" ", string.Empty);
@@ -243,10 +263,17 @@ namespace Sepon.pages
                                 lbltblName.Text = "No SEM results for furnance fragments";
                                 GridViewSEMResults.DataSource = null;
                                 GridViewSEMResults.DataBind();
+                                GridViewListOfObjSmpl.DataSource = null;
+                                GridViewListOfObjSmpl.DataBind();
                             }
                             }
                     }
-
+                    else
+                    {
+                        lbltblName.Text = null;
+                        GridViewSEMResults.DataSource = null;
+                        GridViewSEMResults.DataBind();
+                    }
                         // binding images urls to ImageGallery datalist control
                         var urls = from url in dbSepon.ImageURLs
                                              join img in dbSepon.Images on url.Img_ID equals img.Img_ID
