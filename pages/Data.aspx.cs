@@ -234,13 +234,26 @@ namespace Sepon.pages
 
                             
                             {
-                                var selobject = from eobject in dbSepon.Objects
-                                                     where eobject.Object_Type == objtype
-                                select new {ID = eobject.Obj_ID,Type = eobject.Object_Type,Description=eobject.Object_Description_Short,Discovered = eobject.Discovery_Date, eobject.Texture, eobject.Surface, eobject.Inclusions }; //anonymous type for multiple column selection
-                               if (selobject.Any())
+                                // linq with lambda expressions
+                                var query = dbSepon.Objects
+                                    .Where(obj => obj.Object_Type == objtype)
+                                    .Select(obj => new { ID = obj.Obj_ID, Type = obj.Object_Type,
+                                        Description = obj.Object_Description_Short,
+                                        Discovered = SqlFunctions.DateName("day", obj.Discovery_Date).Trim() + "/" +
+                                                    SqlFunctions.StringConvert((double)obj.Discovery_Date.Value.Month).TrimStart() + "/" +
+                                                    SqlFunctions.DateName("year", obj.Discovery_Date),
+                                        obj.Texture, obj.Surface, obj.Inclusions }); //anonymous type for multiple column selection )
+
+
+                               
+                                //LINQ query comprehension syntax
+                                //var selobject = from eobject in dbSepon.Objects
+                                //                     where eobject.Object_Type == objtype
+                                //select new {ID = eobject.Obj_ID,Type = eobject.Object_Type,Description=eobject.Object_Description_Short,Discovered = eobject.Discovery_Date, eobject.Texture, eobject.Surface, eobject.Inclusions }; //anonymous type for multiple column selection
+                                if (query.Any())
                                 {
                                     
-                                    GridViewListOfObjSmpl.DataSource = selobject.ToList(); 
+                                    GridViewListOfObjSmpl.DataSource = query.ToList(); 
                                     GridViewListOfObjSmpl.DataBind();
                                 }
                                 else
