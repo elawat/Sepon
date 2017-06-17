@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/References.master" AutoEventWireup="true" Inherits="References" Codebehind="References.aspx.cs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/About.master" AutoEventWireup="true" Inherits="References" Codebehind="References.aspx.cs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <script>
