@@ -74,22 +74,30 @@ html, body { margin: 0 }
     background-color: #FFFFFF;
     margin: 0px;
     border: 0;
+       min-width: 100px;
     
 }
 
 .navbar-default .navbar-nav  {
     float: right;
-
-}
-
-.navbar-default .navbar-nav > li  {
  
 
 }
 
+
 .navbar-default .navbar-nav > li > a {
     color: #2B4B6F;
     font-weight: 700;
+}
+
+.active-page {
+   border-bottom: 2px solid;
+   border-bottom-color: #C0C0C0;
+}
+
+.active-page-side {
+   border-left: 2px solid;
+   border-left-color:#C0C0C0;
 }
 
 .navbar-default .navbar-nav > li > a:hover{
@@ -120,9 +128,7 @@ a:hover {
     text-decoration: none;
 }
 
-a:active {
-    
-}
+
 
 .download {
     text-decoration: none;

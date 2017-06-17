@@ -31,6 +31,15 @@
          });
     </script>
 
+    <script>
+
+           $(document).ready($(function () {
+               ActivePageMainRun();
+               ActivePageSide();
+           }));
+
+       </script>
+
     <p>Peun Baolo (hereafter PB) and Thong Na Nguak (TNN), are located in the Sepon region of Savannakhet Province, south-eastern Laos <cite>(Chang et al., unpublished)</cite> (Fig. 1). They are both situated within the area of Lane Xang Minerals Limited’s current mining works.</p>
     <figure>
     <img class="img-center" ID="map" src="../images/map.png" alt="Map of Southeast Asia with PB and TNN marked" />

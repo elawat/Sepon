@@ -1,8 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/About.master" AutoEventWireup="true" Inherits="Default2" Codebehind="About.aspx.cs" %>
 
 
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-   <p> Website presents the results of my master dissertation together with all the data I gathered during its preparation. I have made available an almost unchanged version of the original paper. As such, it inherits all the imperfections of an assessment work (please see Feedback section for more details). </p>
+        <script>
+
+           $(document).ready($(function () {
+               ActivePageMainRun();
+               ActivePageSide();
+           }));
+
+       </script>
+    
+    
+    
+    <p> Website presents the results of my master dissertation together with all the data I gathered during its preparation. I have made available an almost unchanged version of the original paper. As such, it inherits all the imperfections of an assessment work (please see Feedback section for more details). </p>
    <br />
    <p><small>The dissertation was submitted in partial fulfilment of the requirements for the degree of MSc in the Technology and Analysis of Archaeological Materials of University College London in 2012.</small></p>
    <br />

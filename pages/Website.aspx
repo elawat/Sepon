@@ -2,6 +2,15 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+       <script>
+
+           $(document).ready($(function () {
+               ActivePageMainRun();
+               ActivePageSide();
+           }));
+
+       </script>
+    
     <p> I created this website because I wanted to learn creating websites. Thus, I see its value in rather being a good exercise than in presenting the content. While admitting it I also would like to add that I selected the topic because of the data, results of almost 1000 EDS analyses I’ve done, owned and could use for learning server-side development, and they were made fully available, as accurately as possible, so I hope they can be interesting or useful also for somebody else. </p>
     <p> When I started to work on this website I did not know much about web development. I had some experience in programming, a lot in VBA, little in VB.net and C#. All the applications I ever wrote were desktop single-language rather linear (procedural) programs. But I wanted to go online believing this will give me so much more flexibility (in my life choices) and about web development I knew only very basics: HTML for front-end structure, CSS for its style, JavaScript for its interactivity, C# for back-end stuff, and data in a database. But how this fits together, the whole infrastructure, tools, hosting, deployment were significantly beyond my comprehension.</p>
     <p>Here I will provide, and will try to keep it up-to-date, details of the technologies I used to create this website. It was an interesting journey for me, clearly not a straightforward one, and if any of this will make it in any way easier for anybody, that’s great. Also any feedback I can get would be highly appreciated. I am sure many things may have been done more efficient, cleverer, just better and I would like to improve them.</p>

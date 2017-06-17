@@ -2,7 +2,14 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="AccessFormContent" runat="server">
-    
+   <script>
+
+           $(document).ready($(function () {
+               ActivePageMainRun();
+               ActivePageSide();
+           }));
+
+       </script>
     
     <table id="ObjectsForm" runat="server">
         <tr>

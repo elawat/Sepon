@@ -2,12 +2,15 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <ul class="list-unstyled sidebar-nav">
         <li><a href="About.aspx"><h4>Content</h4></a></li>
         <li><a href="Website.aspx"><h4>Website</h4></a></li>
+         <li><a href="PBandTNN.aspx"><h4>Peun Baolo & Thong Na Nguak</h4></a></li>
         <li><a href="References.aspx"><h4>References</h4></a></li>
         <li><a href="#"><h4>Feedback</h4></a></li>
         <li><a href="Acknowledgements.aspx"><h4>Acknowledgements</h4></a></li>

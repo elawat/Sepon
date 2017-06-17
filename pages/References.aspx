@@ -12,6 +12,15 @@ if(value =="")
 }
 
 </script>
+
+    <script>
+
+           $(document).ready($(function () {
+               ActivePageMainRun();
+               ActivePageSide();
+           }));
+
+       </script>
          <br />
     
     <div class="lookup-box">

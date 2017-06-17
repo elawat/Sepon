@@ -13,7 +13,6 @@
         <li><a href="../pages/Slag.aspx"><h4>Slag</h4></a></li>
         <li><a href="../pages/Ingot.aspx"><h4>Ingot</h4></a></li>
          <li><a href="../pages/Pottery.aspx"><h4>Pottery</h4></a></li>
-        <li><a href="../pages/Data.aspx"><h4>Data</h4></a></li>
      </ul>
 </asp:Content>
 
